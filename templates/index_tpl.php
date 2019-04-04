@@ -1,6 +1,6 @@
 <main>
 
-	<h1>Ludovic FAURE</h1>
+	<h1 class="main">Ludovic FAURE</h1>
 
 	<section class="container">
 
@@ -22,7 +22,21 @@
 
 			<h2>Cascade</h2>
 
-			<article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sint omnis repudiandae ducimus vero, tenetur accusantium. Similique dignissimos modi, quasi debitis veritatis ab, commodi excepturi voluptate, sint eaque quam necessitatibus?
+			<article>	<?php foreach($articles as $article): ?>
+
+		<p>
+			<?= $article["date"]; ?>
+		</p>
+
+		<h1>
+			<?= $article["titre"]; ?>
+		</h1>
+
+		<p>
+			<?= $article["contenu"]; ?>
+		</p>
+
+	<?php endforeach; ?>
 			</article>
 			
 		</section>

@@ -2,7 +2,7 @@ body {
 	background-color: #f7f1e3;
 	margin: 0 auto;
 	font-family: 'Indie Flower', cursive;
-	color: #fff;
+	color: black;
 }
 
 header, footer {
@@ -14,7 +14,7 @@ header, footer {
 }
 
 header nav a, footer nav a {
-	padding: 0px 16px;
+	padding: 0px 32px;
 	list-style-type: none;
 	text-decoration: none;
 	color: #808e9b;
@@ -37,7 +37,7 @@ main {
 	background-attachment: fixed;
 }
 
-h1 {
+.main h1 {
 	margin: 0;
 	text-align: center;
 }
@@ -113,6 +113,12 @@ article {
 img.carrousel_photo {
 	border: 2px solid #FFF;
 }
+
+/********** PAGE EXPERIENCE **********/
+
+/*.experience {
+	display: flex;
+}*/
 
 /********** PAGE CONTACT **********/
 

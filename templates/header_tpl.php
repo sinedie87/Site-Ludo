@@ -1,5 +1,5 @@
 <!-- Header avec menu navigation -->
-
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">

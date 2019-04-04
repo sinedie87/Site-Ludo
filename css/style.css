@@ -21,7 +21,7 @@ header nav a, footer nav a {
 	text-decoration: none;
 	color: #808e9b;
 	background-color: #1e272e/*#33d9b2*/;
-	transition: all 1s ease-out;
+	/*transition: all 1s ease-out;*/
 }
 
 header nav a:hover, footer nav a:hover {

@@ -14,8 +14,6 @@ $articles = $query->fetchAll( PDO::FETCH_ASSOC );
 
 $query->closeCursor();
 
-var_dump($articles);
-
 
 
 

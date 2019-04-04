@@ -1,3 +1,4 @@
+	/****** GLOBAL ******/
 body {
 	background-color: #f7f1e3;
 	margin: 0 auto;
@@ -5,6 +6,7 @@ body {
 	color: black;
 }
 
+	/****** HEADER, FOOTER, NAV ******/
 header, footer {
 	background-color: #808e9b/*#aaa69d*/;
 	display: flex;
@@ -32,12 +34,14 @@ nav {
 	transform: skew(-15deg);
 }
 
+	/***** MAIN *****/
 main {
 	background-image: url(../images/fd.png);
 	background-attachment: fixed;
+	color: white;
 }
 
-.main h1 {
+h1.main {
 	margin: 0;
 	text-align: center;
 }
@@ -49,18 +53,12 @@ h2 {
 	text-align: center;
 }
 
-.description h2 {
-	border: none;
-}
+	/***** CONTAINER 1 : DESCRIPTION ET PORTRAIT *****/
 
 .container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-}
-
-.container2 {
-	display: flex;
 }
 
 .description {
@@ -71,6 +69,10 @@ h2 {
 	margin: 0 32px;*/
 	/*flex: 1 1 75%;*/
 
+}
+
+.description h2 {
+	border: none;
 }
 
 .portrait {
@@ -88,6 +90,12 @@ h2 {
 	border-radius: 50%;
 	width: 200px;
 	height: auto;
+}
+
+	/***** CONTAINER 2 : CASCADE, ACTING, ARTS MARTIAUX *****/	
+
+.container2 {
+	display: flex;
 }
 
 .cascade, .acting, .artsmartiaux {
@@ -116,9 +124,13 @@ img.carrousel_photo {
 
 /********** PAGE EXPERIENCE **********/
 
-/*.experience {
+.experience {
 	display: flex;
-}*/
+}
+
+.experience h3, .experience p {
+	margin: 0.5em;
+}
 
 /********** PAGE CONTACT **********/
 
@@ -147,9 +159,10 @@ textarea {
 	border: none;
 }
 
-input[type=submit]{
- width: 620px;
+input[type=submit], input[type=reset]{
+ max-width: 100%;
  padding: 8px;
+ margin-right: 10px;
  cursor: pointer;
  color: #808e9b/*#33d9b2*/;
 }

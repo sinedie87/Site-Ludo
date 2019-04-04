@@ -8,8 +8,6 @@
 <!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-<!-- JS -->
-	<script src="js/slider.js" async></script>
 	<title>Ludovic FAURE - cascadeur</title>
 </head>
 

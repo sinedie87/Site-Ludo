@@ -1,7 +1,12 @@
 <!-- Footer avec menu navigation -->
 
-
-	<script src="js/main.js"></script>
+<!-- JS -->
+	<!-- Slider -->
+	<!-- <script src="js/slider.js" async></script> -->
+	<!-- Titres alternatifs -->
+	<!-- <script src="js/main.js"></script> -->
+	<!-- Apparition bloc CV -->
+	<script src="js/cv.js"></script>
 
 	<footer>
 

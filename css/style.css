@@ -110,6 +110,15 @@ h2 {
 article {
 	padding: 8px;
 }
+/********** PAGE CV **********/
+
+.contentExp {
+	display: none;
+}
+
+.hide {
+	display: block;
+}
 
 /********** PAGE PHOTO **********/
 

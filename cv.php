@@ -24,4 +24,6 @@ include "templates/header_tpl.php";
 
 include "templates/cv_tpl.php";
 
+include "templates/footer_tpl.php";
+
 ?>

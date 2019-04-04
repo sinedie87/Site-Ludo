@@ -8,11 +8,11 @@
 				<?= $article["date"]; ?>
 			</h3>
 
-			<p>
+			<p class="titleExp">
 				<?= $article["titre"]; ?>
 			</p>
 
-			<p>
+			<p class="contentExp">
 				<?= $article["contenu"]; ?>
 			</p>
 		</div>
@@ -25,3 +25,4 @@
 	<h2>Formations :</h2>
 	
 </article>
+

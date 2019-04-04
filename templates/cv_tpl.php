@@ -1,19 +1,27 @@
-<article class="experience">
+<article >
+	<h2>Expériences :</h2>
 
 	<?php foreach($articles as $article): ?>
 
-		<p>
-			<?= $article["date"]; ?>
-		</p>
+		<div class="experience">
+			<h3>
+				<?= $article["date"]; ?>
+			</h3>
 
-		<h1>
-			<?= $article["titre"]; ?>
-		</h1>
+			<p>
+				<?= $article["titre"]; ?>
+			</p>
 
-		<p>
-			<?= $article["contenu"]; ?>
-		</p>
+			<p>
+				<?= $article["contenu"]; ?>
+			</p>
+		</div>
 
 	<?php endforeach; ?>
+	
+</article>
+
+<article>
+	<h2>Formations :</h2>
 	
 </article>

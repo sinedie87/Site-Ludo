@@ -12,10 +12,8 @@ $articles = $query->fetchAll( PDO::FETCH_ASSOC );
 $query->closeCursor();
 
 
-include "templates/header_tpl.php"; 
 
 include "templates/index_tpl.php";
 
-include "templates/footer_tpl.php"; 
 
 ?>

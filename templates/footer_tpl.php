@@ -1,17 +1,5 @@
-<!-- Footer avec menu navigation -->
+<footer>
 
-<!-- JS -->
-	<!-- Slider -->
-	<!-- <script src="js/slider.js" async></script> -->
-	<!-- Titres alternatifs -->
-	<!-- <script src="js/main.js"></script> -->
-	<!-- Apparition bloc CV -->
-	<script src="js/cv.js"></script>
+	<?php include "menu_tpl.php"; ?>
 
-	<footer>
-
-		<?php include "menu_tpl.php"; ?>
-
-	</footer>
-</body>
-</html>
+</footer>

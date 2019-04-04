@@ -17,12 +17,6 @@ $query->closeCursor();
 
 };
 
-
-
-
-
-include "templates/header_tpl.php";
-
 include "templates/admin_tpl.php";
 
 ?>

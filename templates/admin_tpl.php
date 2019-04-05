@@ -13,38 +13,39 @@
 
 <body>
 
-<?php include "templates/header_tpl.php"; ?>
+	<?php include "templates/header_tpl.php"; ?>
 
 <main>
 
-	<form action="" method="post">
-	<h2>Expériences :</h2>
+	<form action="" method="post" class="form_Admin">
+
+		<h2>Expériences :</h2>
 	
-	<input type="date" name="date" required="required">
+			<input type="date" name="date" required="required">
 
-	<input type="text" name="titre" required="required">
+			<input type="text" name="titre" required="required">
 
-	<textarea name="contenu" cols="30" rows="10" required="required"></textarea>
+			<textarea name="contenu" cols="30" rows="10" required="required"></textarea>
 
-	<input type="submit" value="Valider"><input type="reset" value="Effacer">
+			<input type="submit" value="Valider"><input type="reset" value="Effacer">
 
 	</form>
 
-	<form action="" method="post">
+	<form action="" method="post" class="form_Admin">
+
 		<h2>Formations :</h2>
-		
-		<input type="date" name="date" required="required">
+			
+			<input type="date" name="date" required="required">
 
-		<input type="text" name="titre" required="required">
+			<input type="text" name="titre" required="required">
 
-		<textarea name="contenu" cols="30" rows="10" required="required"></textarea>
+			<textarea name="contenu" cols="30" rows="10" required="required"></textarea>
 
-		<input type="submit" value="Valider"><input type="reset" value="Effacer">
+			<input type="submit" value="Valider"><input type="reset" value="Effacer">
 
 	</form>
 
 </main>
-
 <!-- Footer avec menu navigation -->
 
 <?php include "templates/footer_tpl.php"; ?>

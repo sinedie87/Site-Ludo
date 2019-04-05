@@ -8,7 +8,7 @@
 <!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-	<title>Ludovic FAURE - cascadeur</title>
+	<title>Ludovic FAURE - Contact</title>
 </head>
 
 <body>
@@ -17,10 +17,14 @@
 
 <main>
 
-	<form action="" method="post">
+	<section class="container_CV">
 		
-		<!-- <section class="contact"> -->
+		<img src="images/profil.jpg" alt="">
+
+		<form action="" method="post" class="form_Contact">
 			
+			<!-- <section class="contact"> -->
+				
 			<!-- <p>Votre nom : </p> -->
 			<input type="text" name="nom" placeholder="Votre nom">
 			
@@ -45,8 +49,10 @@
 
 		<!-- </section> -->
 
+		</form>
 
-	</form>
+	</section>
+
 </main>
 
 <!-- Footer avec menu navigation -->

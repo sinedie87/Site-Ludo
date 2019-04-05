@@ -8,7 +8,7 @@
 <!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-	<title>Ludovic FAURE - cascadeur</title>
+	<title>Ludovic FAURE - Expériences</title>
 </head>
 
 <body>
@@ -18,32 +18,34 @@
 <main>
 
 	<article >
+
 	<h2>Expériences :</h2>
 
-	<?php foreach($articles as $article): ?>
+		<?php foreach($articles as $article): ?>
 
-		<div class="experience">
-			<h3>
-				<?= $article["date"]; ?>
-			</h3>
+			<section class="experience">
+				<h3>
+					<?= $article["date"]; ?>
+				</h3>
 
-			<p class="titleExp">
-				<?= $article["titre"]; ?>
-			</p>
+				<p class="titleExp">
+					<?= $article["titre"]; ?>
+				</p>
 
-			<p class="contentExp">
-				<?= $article["contenu"]; ?>
-			</p>
-		</div>
+				<p class="contentExp">
+					<?= $article["contenu"]; ?>
+				</p>
+			</section>
 
-	<?php endforeach; ?>
+		<?php endforeach; ?>
 	
-</article>
+	</article>
 
-<article>
-	<h2>Formations :</h2>
-	
-</article>
+	<article>
+		
+		<h2>Formations :</h2>
+		
+	</article>
 
 </main>
 

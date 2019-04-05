@@ -8,7 +8,7 @@
 <!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-	<title>Ludovic FAURE - cascadeur</title>
+	<title>Ludovic FAURE - Photos</title>
 </head>
 
 <body>
@@ -19,17 +19,17 @@
 
 	<section class="carrousel">
 	
-	<figure>
-		
-		<img class="carrousel_photo" src="">
-		<figcaption></figcaption>
+		<figure>
+			
+			<img class="carrousel_photo" src="">
+			<figcaption></figcaption>
 
-	</figure>
+		</figure>
 
-	<nav class="toolbar">
-		<button id="slider-previous"><i class="fas fa-backward"></i></button>
-		<button id="slider-next"><i class="fas fa-forward"></i></button>
-	</nav>
+		<nav class="toolbar">
+			<button id="slider-previous"><i class="fas fa-backward"></i></button>
+			<button id="slider-next"><i class="fas fa-forward"></i></button>
+		</nav>
 
 	</section>
 

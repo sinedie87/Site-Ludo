@@ -46,7 +46,7 @@ h1.main {
 	text-align: center;
 }
 
-h2 {
+.container2 h2 {
 	border: 2px solid #FFF;
 	border-bottom: none;
 	margin: 0px;
@@ -79,8 +79,8 @@ h2 {
 	/*border-style: dashed solid;
 	border-width: 8px;
 	border-color: grey;
-	padding: 16px;
-	margin: 0 32px;*/
+	padding: 16px;*/
+	margin: 16px 0px;
 	border-radius: 50%;
 	/*flex: 1 1 25%;*/
 	text-align: center;
@@ -96,19 +96,26 @@ h2 {
 
 .container2 {
 	display: flex;
+
 }
 
 .cascade, .acting, .artsmartiaux {
-	/*flex: 1 1 auto;*/
+	flex: 1 1 33%;
 	margin: 16px 8px;
 }
 
-.artsmartiaux article, .cascade article, .acting article {
+.cascade article, .acting article, .artsmartiaux article {
 	border: 2px solid #FFF;
+	/*height: 306px;*/
+	/*display: flex;*/
+	
 }
 
 article {
 	padding: 8px;
+	text-align: center;
+
+
 }
 /********** PAGE CV **********/
 
@@ -118,6 +125,10 @@ article {
 
 .hide {
 	display: block;
+}
+
+.experience h3, .experience p {
+	margin: 0.5em;
 }
 
 /********** PAGE PHOTO **********/
@@ -131,38 +142,35 @@ img.carrousel_photo {
 	border: 2px solid #FFF;
 }
 
-/********** PAGE EXPERIENCE **********/
-
-.experience {
-	display: flex;
-}
-
-.experience h3, .experience p {
-	margin: 0.5em;
-}
-
 /********** PAGE CONTACT **********/
 
-form {
-	/*display: flex;
-	flex-direction: column;*/
-	/*align-content: center;*/
-	width: 620px;
-	margin: 0 auto;
+.container_CV {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.container_CV img {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+
+.form_Contact {
 	text-align: center;
 	padding: 16px;
 }
 
 input {
 	padding: 8px;
-	width: 200px;
+	width: 140px;
 	border: none;
 }
 
 textarea {
 	resize: none;
-	width: 620px; 
-	height: 235px; 
+	width: 460px; 
+	height: 175px; 
 	padding: 8px;
 	margin: 0 auto;
 	border: none;
@@ -181,15 +189,18 @@ input[type=submit], input[type=reset]{
   text-align: center;
 }
 
-.contact {
+/********** PAGE ADMIN **********/
 
+
+.form_Admin {
+	/*display: flex;
+	flex-direction: column;*/
+	/*align-content: center;*/
+	width: 620px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 16px;
 }
-
-input {
-	
-}
-
-
 
 
 

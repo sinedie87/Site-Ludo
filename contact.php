@@ -1,1 +1,7 @@
-<?php include "templates/contact_tpl.php"; ?>
+<?php 
+
+session_start();
+
+include "templates/contact_tpl.php";
+
+?>

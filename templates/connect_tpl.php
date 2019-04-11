@@ -8,7 +8,7 @@
 <!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-	<title>Ludovic FAURE - Photos</title>
+	<title>Ludovic FAURE - Connexion</title>
 </head>
 
 <body>
@@ -17,28 +17,28 @@
 
 <main>
 
-	<section class="carrousel">
+<?php if($_SESSION["connected"] = true && isset($mail)): ?>
+	<h1>Bonjour <?= $mail ?></h1>
+<?php else: ?>
 	
-		<figure>
-			
-			<img class="carrousel_photo" src="">
-			<figcaption></figcaption>
+	<section>
 
-		</figure>
+		<form action="" method="post">
+		
+			<input type="email" name="mail" placeholder="Votre e-mail">
 
-		<nav class="toolbar">
-			<button id="slider-previous"><i class="fas fa-backward"></i></button>
-			<button id="slider-next"><i class="fas fa-forward"></i></button>
-		</nav>
+			<input type="password" name="password" placeholder="Votre mot de passe">
+
+			<input type="submit">
+
+		</form>
 
 	</section>
+<?php endif; ?>
 
 </main>
 
 <!-- Footer avec menu navigation -->
-
-	<!-- Slider -->
-	<script src="js/slider.js" async></script>
 
 <?php include "templates/footer_tpl.php"; ?>
 

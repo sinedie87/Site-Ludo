@@ -21,7 +21,7 @@
 
 		<h2>Expériences :</h2>
 	
-			<input type="date" name="date" required="required">
+			<input type="date" name="publish_date" required="required">
 
 			<input type="text" name="titre" required="required">
 
@@ -35,7 +35,7 @@
 
 		<h2>Formations :</h2>
 			
-			<input type="date" name="date" required="required">
+			<input type="date" name="publish_date" required="required">
 
 			<input type="text" name="titre" required="required">
 

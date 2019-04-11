@@ -24,13 +24,12 @@
 		<?php foreach($articles as $article): ?>
 
 			<section class="experience">
-				<h3>
-					<?= $article["date"]; ?>
-				</h3>
 
-				<p class="titleExp">
+				<h3 class="titleExp">
+					<?= $article["publish_date"]; ?>
+					<!-- <?= $new_date; ?> -->
 					<?= $article["titre"]; ?>
-				</p>
+				</h3>
 
 				<p class="contentExp">
 					<?= $article["contenu"]; ?>

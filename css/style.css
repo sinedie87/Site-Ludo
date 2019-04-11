@@ -1,9 +1,9 @@
 	/****** GLOBAL ******/
 body {
-	background-color: #f7f1e3;
 	margin: 0 auto;
 	font-family: 'Indie Flower', cursive;
-	color: black;
+	color: white;
+	background-image: url(../images/Background.jpg);
 }
 
 	/****** HEADER, FOOTER, NAV ******/
@@ -12,7 +12,7 @@ header, footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 16vh;
+	height: 8vh;
 }
 
 header nav a, footer nav a {
@@ -29,29 +29,49 @@ header nav a:hover, footer nav a:hover {
 	color: #808e9b/*#33d9b2*/;
 }
 
-nav {
-	background-color: #808e9b/*#aaa69d*/;
-	transform: skew(-15deg);
+.current_page {
+	background-color: yellow;
 }
 
 	/***** MAIN *****/
 main {
-	background-image: url(../images/fd.png);
+	/*background-image: url(../images/fd.png);*/
 	background-attachment: fixed;
 	color: white;
 }
 
 h1.main {
+	font-size: 64px;
 	margin: 0;
 	text-align: center;
 }
 
-.container2 h2 {
+.oblique {
+	transform: skew(-15deg);
+}
+
+.description article {
+	border: 2px solid #FFF;
+	width: 70%;
+	margin: 32px auto;
+	font-size: 32px;
+}
+
+.description article a {
+	font-size: 16px;
+	padding: 0 32px;
+	list-style-type: none;
+	text-decoration: none;
+	color: #808e9b;
+	background-color: #1e272e;
+}
+
+/*.container2 h2 {
 	border: 2px solid #FFF;
 	border-bottom: none;
 	margin: 0px;
 	text-align: center;
-}
+}*/
 
 	/***** CONTAINER 1 : DESCRIPTION ET PORTRAIT *****/
 
@@ -106,9 +126,9 @@ h1.main {
 
 .cascade article, .acting article, .artsmartiaux article {
 	border: 2px solid #FFF;
-	/*height: 306px;*/
+	height: 80%;
 	/*display: flex;*/
-	
+
 }
 
 article {

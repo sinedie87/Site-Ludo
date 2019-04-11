@@ -21,7 +21,9 @@
 
 		<section class="portrait">
 
-			<img src="images/profil.jpg">
+			<h1 class="main">Ludovic FAURE</h1>
+
+			<!-- <a href="photo.php"><img src="images/profil.jpg"></a> -->
 
 		</section>
 
@@ -30,16 +32,29 @@
 			<!-- <h2>Description</h2> -->
 
 			<article>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, illum! Consequatur, excepturi itaque sed eum reprehenderit possimus maiores voluptates accusantium eos, id dignissimos soluta omnis quam eveniet magnam atque. Sapiente.
+				
+				<p>Mon parcours démarre à l'âge de 5 ans quand je débute le Karate Shotokan. Je me passionne alors pour le vaste monde des arts martiaux que je n'ai de cesse de découvrir.</p>
+
+				<p>Après 3 ans d'études en communication qui me destinaient à devenir infographiste, ma vie prend un tout autre tournant quand je décide finalement d'aller me former au Campus Univers Cascade, une école de cascade française.<br>
+				Fort de mes multiples années de pratique des arts martiaux et de cette nouvelle formation, je peux enfin vivre de ma passion.</p>
+
+				<p>Depuis ce jour, j'ai travaillé en tant que cascadeur pour différents spectacles, notamment au Puy du Fou, à Disneyland Paris ou encore pour Contre-Temps Cie.</p>
+
+				<section class="oblique">
+
+					<a href="cv.php">En savoir plus</a>
+
+				</section>
+
 			</article>
 
-			<h1 class="main">Ludovic FAURE</h1>
+			
 
 		</section>
 
 	</section>  
 
-	<section class="container2">
+	<!--<section class="container2">
 
 		<section class="cascade">
 
@@ -85,7 +100,7 @@
 			<article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sint omnis repudiandae ducimus vero, tenetur accusantium. Similique dignissimos modi, quasi debitis veritatis ab, commodi excepturi voluptate, sint eaque quam necessitatibus?
 			</article>
 
-		</section>	
+		</section>-->
 
 	</section>
 

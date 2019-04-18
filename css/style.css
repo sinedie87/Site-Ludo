@@ -2,24 +2,36 @@
 
 body {
 	margin: 0 auto;
-	font-family: 'Indie Flower', cursive;
+	/*font-family: 'Indie Flower', cursive;*/
+	font-family: 'Poiret One', cursive;
 	color: white;
-	background-image: url(../images/Background.jpg);
-	/*background-image: no-repeat;*/
+	background-image: url(../images/background.jpg);
+	/*background-origin: border-box;*/
+	/*background-repeat: no-repeat;*/
 }
 
 /* Class pour page active */
 .current_page {
-	background-color: yellow;
+	background-color: #82ccdd;
 }
 
 	/****** HEADER, FOOTER, NAV ******/
 header, footer {
-	background-color: #808e9b/*#aaa69d*/;
+	/*background-color: #808e9b/*#aaa69d*/;*/
+	
+}
+
+.style {
+	background-color: rgba(255, 255, 255, 0.4);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 8vh;
+	height: 16vh;
+	margin: 16px 256px;
+}
+
+header nav {
+	margin: 32px;
 }
 
 header nav a, footer nav a {
@@ -27,13 +39,13 @@ header nav a, footer nav a {
 	list-style-type: none;
 	text-decoration: none;
 	color: #808e9b;
-	background-color: #1e272e/*#33d9b2*/;
+	background-color: #2f3542;
 	/*transition: all 1s ease-out;*/
 }
 
 header nav a:hover, footer nav a:hover {
-	background-color: #fff;
-	color: #808e9b/*#33d9b2*/;
+	background-color: #f1f2f6;
+	color: #808e9b;
 }
 
 	/***** MAIN *****/
@@ -43,8 +55,6 @@ main {
 	background-attachment: fixed;
 	color: white;
 }
-
-
 
 .oblique {
 	transform: skew(-15deg);
@@ -59,13 +69,8 @@ main {
 }
 
 .portrait {
-	/*border-style: dashed solid;
-	border-width: 8px;
-	border-color: grey;
-	padding: 16px;*/
 	margin: 16px 0px;
 	border-radius: 50%;
-	/*flex: 1 1 25%;*/
 	text-align: center;
 }
 
@@ -80,6 +85,7 @@ h1.accueil {
 	width: 70%;
 	margin: 32px auto;
 	font-size: 32px;
+	text-align: center;
 }
 
 .description article a {
@@ -88,15 +94,26 @@ h1.accueil {
 	list-style-type: none;
 	text-decoration: none;
 	color: #808e9b;
-	background-color: #1e272e;
+	background-color: #2f3542;
 }
 
+section.oblique {
+	text-align: right;
+	margin: 16px;
+}
 
 /********** PAGE CV **********/
 
-.experience {
-	padding: 8px;
+.experience, .competence, .formation {
+	/*padding: 8px;*/
 	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.experience h2, .competence h2, .formation h2 {
+	font-size: 64px;
+	margin: 32px;
 }
 
 .contentExp {
@@ -112,8 +129,8 @@ p.contentExp.hide {
 	margin: 0 auto;
 }
 
-.experience h3, .experience p {
-	margin: 1em;
+.experience h3, .competence h3, .formation h3, .experience p {
+	margin: 32px;
 }
 
 /********** PAGE PHOTO **********/
@@ -141,12 +158,14 @@ img.carrousel_photo {
 
 .container_CV {
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-end;
 	align-items: center;
+	background-image: url(../images/contact.jpg);
+	height: 922px;
+
 }
 
 .container_CV img {
-	border-radius: 50%;
 	width: 200px;
 	height: 200px;
 }

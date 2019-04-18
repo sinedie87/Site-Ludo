@@ -9,7 +9,9 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
 	<title>Ludovic FAURE - Contact</title>
 </head>
 
@@ -21,7 +23,7 @@
 
 	<section class="container_CV">
 		
-		<img src="images/profil.jpg" alt="">
+		<!-- <img src="images/contact.jpg" alt=""> -->
 
 		<!-- Formulaire de contact -->
 		<form action="" method="post" class="form_Contact">

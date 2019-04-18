@@ -8,18 +8,22 @@ include "utilities/menu.php"
 
 <header>
 
-	<nav class="oblique">
+	<section class="style">
 
-		<!-- Affiche le menu commun à tous les visiteurs -->
-		<?= general_menu(); ?>
+		<nav class="oblique">
 
-			<!-- Affiche le menu commun à tous les administrateurs si utilisateur connecté -->
-			<?php if(!empty($_SESSION) && $_SESSION["connected"] && $_SESSION["status"] === "admin"): ?>
+			<!-- Affiche le menu commun à tous les visiteurs -->
+			<?= general_menu(); ?>
 
-				<?= admin_menu() ?>
+				<!-- Affiche le menu commun à tous les administrateurs si utilisateur connecté -->
+				<?php if(!empty($_SESSION) && $_SESSION["connected"] && $_SESSION["status"] === "admin"): ?>
 
-			<?php endif; ?>
+					<?= admin_menu() ?>
 
-	</nav>
+				<?php endif; ?>
+
+		</nav>
+	
+	</section>
 
 </header>

@@ -1,3 +1,5 @@
+<!-- TEMPLATE POUR SE CONNECTER (PAGE CACHEE) -->
+
 <!-- Header avec menu navigation -->
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,12 +19,14 @@
 
 <main>
 
+<!-- Affiche le nom de l'utilisateur qui se connecte -->
 <?php if($_SESSION["connected"] = true && isset($mail)): ?>
 	<h1>Bonjour <?= $mail ?></h1>
 <?php else: ?>
 	
 	<section>
 
+		<!-- Formulaire de connexion -->
 		<form action="" method="post">
 		
 			<input type="email" name="mail" placeholder="Votre e-mail">
@@ -39,7 +43,6 @@
 </main>
 
 <!-- Footer avec menu navigation -->
-
 <?php include "templates/footer_tpl.php"; ?>
 
 </body>

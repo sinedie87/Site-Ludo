@@ -1,3 +1,5 @@
+<!-- TEMPLATE POUR FORMULAIRE DE CONTACT -->
+
 <!-- Header avec menu navigation -->
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,24 +23,15 @@
 		
 		<img src="images/profil.jpg" alt="">
 
+		<!-- Formulaire de contact -->
 		<form action="" method="post" class="form_Contact">
 			
-			<!-- <section class="contact"> -->
-				
-			<!-- <p>Votre nom : </p> -->
 			<input type="text" name="nom" placeholder="Votre nom">
 			
-			<!-- <p>Votre prénom : </p> -->
 			<input type="text" name="prenom" placeholder="Votre prénom">
 		
-			<!-- <p>Votre e-mail : </p> -->
 			<input type="email" name="mail" placeholder="Votre e-mail">
-			
-		<!-- </section> -->
 
-		<!-- <section class="form"> -->
-
-			<!-- <p>Votre message : </p> -->
 			<p>
 			<textarea placeholder="Votre message"></textarea>
 			</p>
@@ -47,8 +40,6 @@
 			<input type="submit">
 			</p>
 
-		<!-- </section> -->
-
 		</form>
 
 	</section>
@@ -56,7 +47,6 @@
 </main>
 
 <!-- Footer avec menu navigation -->
-
 <?php include "templates/footer_tpl.php"; ?>
 
 </body>

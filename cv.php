@@ -1,33 +1,29 @@
+<!-- FICHIER POUR GERER AFFICHAGE TABLE ARTICLES SUR PAGE CV -->
 <?php
 
 session_start();
 
 include "utilities/pdo.php";
 
-$query = $pdo->prepare("SELECT *, DATE_FORMAT(publish_date, '%M %Y') as publish_date 
+$query = $pdo->prepare("SELECT *, DATE_FORMAT(date_start, '%M %Y') as date_start, DATE_FORMAT(date_end, '%M %Y') as dates
 	FROM articles
-	ORDER BY publish_date DESC");
+	ORDER BY date_end DESC");
 
 $query->execute();
 
 $articles = $query->fetchAll( PDO::FETCH_ASSOC );
-// var_dump($articles);
 
-/*foreach ($articles as $date_article){
-	$date = $date_article["publish_date"];
-	// var_dump($date);
+/*Code pour afficher les mois en français vs anglais via le serveur (remplace le Set Local Time de MySQL dans le fichier pdo.php)
 
-	$a = strstr($date, " ", true);
-	// var_dump($a);
-
-	$tab_months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	$tab_mois = ["JANVIER", "FEVRIER", "MARS", "AVRIL", "MAI", "JUIN", "JUILLET", "AOUT", "SEPTEMBRE", "OCTOBRE", "NOVEMBRE", "DECEMBRE"];
+	$tab_months_numbers = [];
 
-	$new_date = str_replace($tab_months, $tab_mois, $a);
-	// var_dump($new_date);
-	$tab_new_date = array($new_date);
-	// array_push($tab_new_date);
-	var_dump($tab_new_date);
+foreach ($articles as $date_article){
+	$date = $date_article["date_start"];
+
+	$months_numbers = substr($date, 0, 2);
+
+	array_push($tab_months_numbers, $months_numbers);
 }
 */
 

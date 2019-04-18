@@ -1,23 +1,19 @@
+<!-- FICHIER POUR AFFICHER TABLE ARTICLES SUR TEMPLATE ADMIN -->
 <?php
 
 session_start();
 
 include "utilities/pdo.php";
 
-if(isset($_POST) && !empty($_POST["titre"]) && !empty($_POST["contenu"]) && !empty($_POST["publish_date"])){
+$query = $pdo->prepare("SELECT *
+	FROM articles
+	ORDER BY date_end DESC");
 
-	$titre = htmlspecialchars($_POST["titre"]);
-	$contenu = htmlspecialchars($_POST["contenu"]);
-	$date = htmlspecialchars($_POST["publish_date"]);
+$query->execute();
 
-$query = $pdo->prepare("INSERT INTO articles(titre, contenu, publish_date)
-	VALUES(?, ?, ?)");
-
-$query->execute([$titre, $contenu, $date]);
+$articles = $query->fetchAll(PDO::FETCH_ASSOC);
 
 $query->closeCursor();
-
-};
 
 include "templates/admin_tpl.php";
 

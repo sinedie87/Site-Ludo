@@ -1,3 +1,5 @@
+<!-- TEMPLATE POUR MENU DE NAVIGATION -->
+
 <nav>
 	<a href="index.php">Accueil</a>
 	<a href="cv.php">CV</a>

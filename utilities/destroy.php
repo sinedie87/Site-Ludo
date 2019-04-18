@@ -1,3 +1,4 @@
+<!-- FICHIER POUR DECONNEXION SESSION ADMIN -->
 <?php
 
 session_start();

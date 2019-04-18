@@ -1,3 +1,5 @@
+<!-- TEMPLATE PAGE ADMIN POUR GERER LES PUBLICATIONS DE PAGE CV -->
+
 <!-- Header avec menu navigation -->
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,37 +19,20 @@
 
 <main>
 
-	<form action="" method="post" class="form_Admin">
+	<h1><a href="add_post.php">Ajout d'un article</a></h1>
 
-		<h2>Expériences :</h2>
-	
-			<input type="date" name="publish_date" required="required">
+	<!-- Boucle pour afficher tous les titres des publications EXP/FOR -->
+	<?php foreach ($articles as $article): ?>
 
-			<input type="text" name="titre" required="required">
-
-			<textarea name="contenu" cols="30" rows="10" required="required"></textarea>
-
-			<input type="submit" value="Valider"><input type="reset" value="Effacer">
-
-	</form>
-
-	<form action="" method="post" class="form_Admin">
-
-		<h2>Formations :</h2>
-			
-			<input type="date" name="publish_date" required="required">
-
-			<input type="text" name="titre" required="required">
-
-			<textarea name="contenu" cols="30" rows="10" required="required"></textarea>
-
-			<input type="submit" value="Valider"><input type="reset" value="Effacer">
-
-	</form>
+		<h3 class="titleExp"><?= $article['titre'] ?></h3>
+		<a href="edit.php?id=<?= $article['id'] ?> ">Modifier</a>
+		<a href="delete.php?id=<?= $article['id'] ?> ">Supprimer</a>
+		
+	<?php endforeach; ?>
 
 </main>
-<!-- Footer avec menu navigation -->
 
+<!-- Footer avec menu navigation -->
 <?php include "templates/footer_tpl.php"; ?>
 
 </body>

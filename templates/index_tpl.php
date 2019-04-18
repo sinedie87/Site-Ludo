@@ -1,3 +1,5 @@
+<!-- TEMPLATE POUR PAGE D'ACCUEIL -->
+
 <!-- Header avec menu navigation -->
 <!DOCTYPE html>
 <html lang="fr">
@@ -8,6 +10,7 @@
 <!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet">
 	<title>Ludovic FAURE - cascadeur</title>
 </head>
 
@@ -21,15 +24,11 @@
 
 		<section class="portrait">
 
-			<h1 class="main">Ludovic FAURE</h1>
-
-			<!-- <a href="photo.php"><img src="images/profil.jpg"></a> -->
+			<h1 class="accueil">Ludovic FAURE</h1>
 
 		</section>
 
 		<section class="description">
-
-			<!-- <h2>Description</h2> -->
 
 			<article>
 				
@@ -48,65 +47,11 @@
 
 			</article>
 
-			
-
 		</section>
 
 	</section>  
 
-	<!--<section class="container2">
-
-		<section class="cascade">
-
-			<h2>Cascade</h2>
-
-			<article >
-
-				<?php foreach($articles as $article): ?>
-
-					<section class="experience">
-						<h3>
-							<?= $article["date"]; ?>
-						</h3>
-
-						<p class="titleExp">
-							<?= $article["titre"]; ?>
-						</p>
-
-						<p class="contentExp">
-							<?= $article["contenu"]; ?>
-						</p>
-					</section>
-
-				<?php endforeach; ?>
-
-			</article>	
-
-		</section>
-
-		<section class="acting">
-
-			<h2>Acting</h2>
-
-			<article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sint omnis repudiandae ducimus vero, tenetur accusantium. Similique dignissimos modi, quasi debitis veritatis ab, commodi excepturi voluptate, sint eaque quam necessitatibus?
-			</article>
-
-		</section>
-
-		<section class="artsmartiaux">
-
-			<h2>Arts Martiaux</h2>
-
-			<article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sint omnis repudiandae ducimus vero, tenetur accusantium. Similique dignissimos modi, quasi debitis veritatis ab, commodi excepturi voluptate, sint eaque quam necessitatibus?
-			</article>
-
-		</section>-->
-
-	</section>
-
 </main>
-
-<!-- Footer avec menu navigation -->
 
 <!-- JS -->
 	<!-- Titres alternatifs -->
@@ -114,6 +59,7 @@
 	<!-- Apparition bloc CV -->
 	<script src="js/cv.js"></script>
 
+<!-- Footer avec menu navigation -->
 <?php include "templates/footer_tpl.php"; ?>
 
 </body>

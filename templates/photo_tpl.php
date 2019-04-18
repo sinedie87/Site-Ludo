@@ -1,3 +1,5 @@
+<!-- TEMPLATE POUR PAGE GALERIE -->
+
 <!-- Header avec menu navigation -->
 <!DOCTYPE html>
 <html lang="fr">
@@ -26,6 +28,16 @@
 
 		</figure>
 
+		<figure>
+			
+			<p id="miniature">
+
+				<!-- <li class="imgMin"></li> -->
+			
+			</p>
+
+		</figure>
+
 		<nav class="toolbar">
 			<button id="slider-previous"><i class="fas fa-backward"></i></button>
 			<button id="slider-next"><i class="fas fa-forward"></i></button>
@@ -35,11 +47,11 @@
 
 </main>
 
-<!-- Footer avec menu navigation -->
-
 	<!-- Slider -->
-	<script src="js/slider.js" async></script>
+	<!-- <script src="js/slider.js" async></script> -->
+	<script src="js/newSlider.js" async></script>
 
+<!-- Footer avec menu navigation -->
 <?php include "templates/footer_tpl.php"; ?>
 
 </body>

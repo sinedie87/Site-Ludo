@@ -1,3 +1,4 @@
+<!-- FICHIER POUR PAGE GALERIE -->
 <?php
 
 session_start();

@@ -1,3 +1,5 @@
+<!-- TEMPLATE POUR AJOUTER NOUVEL ADMINISTRATEUR (PAGE CACHEE)-->
+
 <!-- Header avec menu navigation -->
 <!DOCTYPE html>
 <html lang="fr">

@@ -1,9 +1,16 @@
 	/****** GLOBAL ******/
+
 body {
 	margin: 0 auto;
 	font-family: 'Indie Flower', cursive;
 	color: white;
 	background-image: url(../images/Background.jpg);
+	/*background-image: no-repeat;*/
+}
+
+/* Class pour page active */
+.current_page {
+	background-color: yellow;
 }
 
 	/****** HEADER, FOOTER, NAV ******/
@@ -29,27 +36,45 @@ header nav a:hover, footer nav a:hover {
 	color: #808e9b/*#33d9b2*/;
 }
 
-.current_page {
-	background-color: yellow;
-}
-
 	/***** MAIN *****/
+
 main {
 	/*background-image: url(../images/fd.png);*/
 	background-attachment: fixed;
 	color: white;
 }
 
-h1.main {
-	font-size: 64px;
-	margin: 0;
-	text-align: center;
-}
+
 
 .oblique {
 	transform: skew(-15deg);
 }
 
+	/***** PAGE ACCUEIL *****/
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.portrait {
+	/*border-style: dashed solid;
+	border-width: 8px;
+	border-color: grey;
+	padding: 16px;*/
+	margin: 16px 0px;
+	border-radius: 50%;
+	/*flex: 1 1 25%;*/
+	text-align: center;
+}
+
+h1.accueil {
+	font-family: 'Monofett', cursive;
+	font-size: 128px;
+	margin: 0;
+	text-align: center;
+}
 .description article {
 	border: 2px solid #FFF;
 	width: 70%;
@@ -66,78 +91,13 @@ h1.main {
 	background-color: #1e272e;
 }
 
-/*.container2 h2 {
-	border: 2px solid #FFF;
-	border-bottom: none;
-	margin: 0px;
-	text-align: center;
-}*/
 
-	/***** CONTAINER 1 : DESCRIPTION ET PORTRAIT *****/
+/********** PAGE CV **********/
 
-.container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.description {
-	/*border-style: dashed solid;
-	border-width: 8px;
-	border-color: grey;
-	padding: 16px;
-	margin: 0 32px;*/
-	/*flex: 1 1 75%;*/
-
-}
-
-.description h2 {
-	border: none;
-}
-
-.portrait {
-	/*border-style: dashed solid;
-	border-width: 8px;
-	border-color: grey;
-	padding: 16px;*/
-	margin: 16px 0px;
-	border-radius: 50%;
-	/*flex: 1 1 25%;*/
-	text-align: center;
-}
-
-.portrait img {
-	border-radius: 50%;
-	width: 200px;
-	height: auto;
-}
-
-	/***** CONTAINER 2 : CASCADE, ACTING, ARTS MARTIAUX *****/	
-
-.container2 {
-	display: flex;
-
-}
-
-.cascade, .acting, .artsmartiaux {
-	flex: 1 1 33%;
-	margin: 16px 8px;
-}
-
-.cascade article, .acting article, .artsmartiaux article {
-	border: 2px solid #FFF;
-	height: 80%;
-	/*display: flex;*/
-
-}
-
-article {
+.experience {
 	padding: 8px;
 	text-align: center;
-
-
 }
-/********** PAGE CV **********/
 
 .contentExp {
 	display: none;
@@ -145,21 +105,36 @@ article {
 
 .hide {
 	display: block;
+	width: 60%;
+}
+
+p.contentExp.hide {
+	margin: 0 auto;
 }
 
 .experience h3, .experience p {
-	margin: 0.5em;
+	margin: 1em;
 }
 
 /********** PAGE PHOTO **********/
 
-.container_photo {
-	display: flex;
-	justify-content: center;
-}
-
 img.carrousel_photo {
 	border: 2px solid #FFF;
+}
+
+#slider-previous {
+	position: absolute;
+	left: 50px;
+	top: 290px;
+	/*font-size: 1em;*/
+	/*z-index: 2;*/
+}
+
+#slider-next {
+	position: absolute;
+	left: 890px;
+	top: 290px;
+	/*z-index: 2;*/
 }
 
 /********** PAGE CONTACT **********/

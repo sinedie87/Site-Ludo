@@ -1,3 +1,5 @@
+<!-- TEMPLATE POUR PAGE CV -->
+
 <!-- Header avec menu navigation -->
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,43 +19,62 @@
 
 <main>
 
-	<article >
+	<section class="experience">
 
 	<h2>Expériences :</h2>
 
+		<!-- Affiche les publications EXP stockées en BDD -->
 		<?php foreach($articles as $article): ?>
 
-			<section class="experience">
-
 				<h3 class="titleExp">
-					<?= $article["publish_date"]; ?>
-					<!-- <?= $new_date; ?> -->
+					<!-- Si dates identiques, n'affiche que date_end renommée en dates -->
+					<?php if($article["date_start"] == $article["dates"]): ?>
+						<?= strtoupper($article["dates"]); ?>
+					<!-- Sinon affichage des deux dates -->
+					<?php else: ?>
+						<?= strtoupper($article["date_start"]); ?>
+						<?= strtoupper($article["dates"]); ?>
+					<?php endif; ?>
+
+					<!-- Code pour afficher les mois en français vs anglais via le serveur (remplace le Set Local Time de MySQL) -->
+					<!-- <?php
+
+					for($i = 0; $i < sizeof($tab_months_numbers); $i++){
+						if($tab_months_numbers[$i] == substr($article["publish_date"], 0, 2)){
+							echo $tab_mois[($tab_months_numbers[$i]-1)];
+							break;
+						}
+					}
+					?> -->
+					
 					<?= $article["titre"]; ?>
 				</h3>
 
 				<p class="contentExp">
-					<?= $article["contenu"]; ?>
+					<?= $article["contenu"]; ?><br>
+
+					<!-- Permet de n'afficher que la balise iframe là où il y a une vidéo. Evite un bloc vide de 560 par 315 dans le HTML si pas de vidéo-->
+					<?php if(!empty($article["links"])): ?>
+						<iframe width="560" height="315" src="<?= $article['links']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<?php endif; ?>
 				</p>
-			</section>
 
 		<?php endforeach; ?>
 	
-	</article>
+	</section>
 
-	<article>
+	<section class="formations">
 		
 		<h2>Formations :</h2>
 		
-	</article>
+	</section>
 
 </main>
 
-<!-- Footer avec menu navigation -->
-
-	<!-- Apparition bloc CV -->
+	<!-- Affiche/Masque bloc CV -->
 	<script src="js/cv.js"></script>
 
-
+<!-- Footer avec menu navigation -->
 <?php include "templates/footer_tpl.php"; ?>
 
 </body>

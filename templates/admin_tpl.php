@@ -11,7 +11,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-	<title>Ludovic FAURE - cascadeur</title>
+<!-- RESPONSIVE DESIGN -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Ludovic FAURE - Admin</title>
 </head>
 
 <body>
@@ -20,7 +22,7 @@
 
 <main>
 
-	<h1><a href="add_post.php">Ajout d'un article</a></h1>
+	<h1 class="lienAdmin"><a href="add_post.php" class="lienAdmin">Ajout d'un article</a></h1>
 
 	<section class="experience">
 
@@ -29,9 +31,9 @@
 	<!-- Boucle pour afficher tous les titres des publications EXP/FOR -->
 	<?php foreach ($experiences as $experience): ?>
 
-		<h3 class="titleExp"><?= $experience['titre'] ?></h3>
-		<a href="edit.php?id=<?= $experience['id'] ?> ">Modifier</a>
-		<a href="delete.php?id=<?= $experience['id'] ?> ">Supprimer</a>
+		<h3><?= $experience['titre'] ?></h3>
+		<a href="edit.php?id=<?= $experience['id'] ?> " class="lienAdmin">Modifier</a>
+		<a href="delete.php?id=<?= $experience['id'] ?> " class="lienAdmin">Supprimer</a>
 		
 	<?php endforeach; ?>
 
@@ -44,9 +46,9 @@
 	<!-- Boucle pour afficher tous les titres des publications EXP/FOR -->
 	<?php foreach ($competences as $competence): ?>
 
-		<h3 class="titleExp"><?= $competence['titre_comp'] ?></h3>
-		<a href="edit.php?id_comp=<?= $competence['id_comp'] ?> ">Modifier</a>
-		<a href="delete.php?id_comp=<?= $competence['id_comp'] ?> ">Supprimer</a>
+		<h3><?= $competence['titre_comp'] ?></h3>
+		<a href="edit.php?id_comp=<?= $competence['id_comp'] ?> " class="lienAdmin">Modifier</a>
+		<a href="delete.php?id_comp=<?= $competence['id_comp'] ?> " class="lienAdmin">Supprimer</a>
 		
 	<?php endforeach; ?>
 
@@ -59,18 +61,21 @@
 	<!-- Boucle pour afficher tous les titres des publications EXP/FOR -->
 	<?php foreach ($formations as $formation): ?>
 
-		<h3 class="titleExp"><?= $formation['titre_form'] ?></h3>
-		<a href="edit.php?id_form=<?= $formation['id_form'] ?> ">Modifier</a>
-		<a href="delete.php?id_form=<?= $formation['id_form'] ?> ">Supprimer</a>
+		<h3><?= $formation['titre_form'] ?></h3>
+		<a href="edit.php?id_form=<?= $formation['id_form'] ?> " class="lienAdmin">Modifier</a>
+		<a href="delete.php?id_form=<?= $formation['id_form'] ?> " class="lienAdmin">Supprimer</a>
 		
 	<?php endforeach; ?>
 
 	</section>
 
 </main>
+<!-- JS -->
+	<!-- Menu mobile -->
+	<script src="js/menu_mobile.js"></script>
 
 <!-- Footer avec menu navigation -->
-<?php include "templates/footer_tpl.php"; ?>
+
 
 </body>
 </html>

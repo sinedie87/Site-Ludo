@@ -11,6 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<!-- RESPONSIVE DESIGN -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<title>Ludovic FAURE - Connexion</title>
 </head>
 
@@ -28,7 +30,7 @@
 	<section>
 
 		<!-- Formulaire de connexion -->
-		<form action="" method="post">
+		<form action="" method="post" class="form_Admin">
 		
 			<input type="email" name="mail" placeholder="Votre e-mail">
 
@@ -42,9 +44,12 @@
 <?php endif; ?>
 
 </main>
+<!-- JS -->
+	<!-- Menu mobile -->
+	<script src="js/menu_mobile.js"></script>
 
 <!-- Footer avec menu navigation -->
-<?php include "templates/footer_tpl.php"; ?>
+
 
 </body>
 </html>

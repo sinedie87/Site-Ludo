@@ -29,6 +29,8 @@ if(isset($_POST) && !empty($_POST["mail"]) && !empty($_POST["password"])){
 			$_SESSION["connected"] = true;
 			$_SESSION["status"] = $users["status"];
 
+			header("Location: admin.php");
+
 		}
 		else{
 			echo "Les informations saisies semblent incorrectes";

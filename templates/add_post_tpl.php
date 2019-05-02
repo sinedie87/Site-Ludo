@@ -11,7 +11,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-	<title>Ludovic FAURE - cascadeur</title>
+<!-- RESPONSIVE DESIGN -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Ludovic FAURE - Ajouter</title>
 </head>
 
 <body>
@@ -33,7 +35,7 @@
 
 			<textarea name="contenu" cols="30" rows="10" placeholder="Contenu" required="required"></textarea>
 
-			<input type="text" name="links">
+			<input type="text" name="links" placeholder="Liens">
 
 			<input type="submit" value="Valider"><input type="reset" value="Effacer">
 
@@ -67,9 +69,12 @@
 
 	</form>
 </main>
+<!-- JS -->
+	<!-- Menu mobile -->
+	<script src="js/menu_mobile.js"></script>
 
 <!-- Footer avec menu navigation -->
-<?php include "templates/footer_tpl.php"; ?>
+
 
 </body>
 </html>

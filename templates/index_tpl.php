@@ -5,15 +5,18 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
-<!-- FontAwesome -->
+<!-- FONTAWESOME -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-	<!-- TITRE -->
+<!-- TITRE -->
 	<link href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet">
-	<title>Ludovic FAURE - cascadeur</title>
+<!-- RESPONSIVE DESIGN -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<title>Ludovic FAURE - Accueil</title>
 </head>
 
 <body>
@@ -26,7 +29,9 @@
 
 		<section class="portrait">
 
-			<h1 class="accueil">Ludovic FAURE</h1>
+			<h1>Ludovic FAURE</h1>
+
+			<h2 class="accueil"></h2>
 
 		</section>
 
@@ -56,13 +61,12 @@
 </main>
 
 <!-- JS -->
-	<!-- Titres alternatifs -->
+	<!-- Titres alternatifs-->
 	<script src="js/main.js"></script>
-	<!-- Apparition bloc CV -->
-	<script src="js/cv.js"></script>
+	<!-- Menu mobile -->
+	<script src="js/menu_mobile.js"></script>
 
 <!-- Footer avec menu navigation -->
-<?php include "templates/footer_tpl.php"; ?>
 
 </body>
 </html>

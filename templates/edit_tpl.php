@@ -11,7 +11,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-	<title>Ludovic FAURE - cascadeur</title>
+<!-- RESPONSIVE DESIGN -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Ludovic FAURE - Editer</title>
 </head>
 
 <body>
@@ -20,6 +22,7 @@
 
 <main>
 
+	<?php if(!empty($_GET['id'])): ?>
 	<!-- Formulaire de MàJ -->
 	<form action="update.php?id=<?= $experience['id'] ?>" method="post" class="form_Admin">
 
@@ -45,34 +48,57 @@
 
 	</form>
 	
+	<?php elseif(!empty($_GET['id_comp'])): ?>
+
 	<form action="update.php?id_comp=<?= $competence['id_comp'] ?>" method="post" class="form_Admin">
 
-		<h2>Compétences :</h2>
+		<fieldset>
 
-			<input type="text" name="titre_comp" required="required" value="<?= $competence['titre_comp'] ?>">
+			<legend>Modification <?= $competence['titre_comp'] ?></legend>
 
-			<textarea name="contenu_comp" cols="30" rows="10" required="required"><?= $competence['contenu_comp'] ?></textarea>
+			<h2>Compétences :</h2>
 
-			<input type="submit" value="Mettre à jour"><input type="reset" value="Effacer">
+				<input type="text" name="titre_comp" required="required" value="<?= $competence['titre_comp'] ?>">
+
+				<textarea name="contenu_comp" cols="30" rows="10" required="required"><?= $competence['contenu_comp'] ?></textarea>
+
+				<input type="submit" value="Mettre à jour"><input type="reset" value="Effacer">
+
+			</fieldset>
 
 	</form>
+
+	<?php elseif(!empty($_GET['id_form'])): ?>
 
 	<form action="update.php?id_form=<?= $formation['id_form'] ?>" method="post" class="form_Admin">
 
-		<h2>Formations :</h2>
+		<fieldset>
 
-			<input type="text" name="titre_form" required="required" value="<?= $formation['titre_form'] ?>">
+			<legend>Modification <?= $formation['titre_form'] ?></legend>
 
-			<textarea name="contenu_form" cols="30" rows="10" required="required"><?= $formation['contenu_form'] ?></textarea>
+			<h2>Formations :</h2>
 
-			<input type="submit" value="Mettre à jour"><input type="reset" value="Effacer">
+				<input type="date" name="date_start_form" required="required" value="<?= $formation['date_start_form'] ?>">
 
+				<input type="date" name="date_end_form" required="required" value="<?= $formation['date_end_form'] ?>">
+
+				<textarea name="titre_form" required="required"><?= $formation['titre_form'] ?></textarea>
+
+				<input type="submit" value="Mettre à jour"><input type="reset" value="Effacer">
+
+		</fieldset>
+		
 	</form>
 
+	<?php endif; ?>
+
 </main>
+<!-- JS -->
+	<!-- Menu mobile -->
+	<script src="js/menu_mobile.js"></script>
 
 <!-- Footer avec menu navigation -->
-<?php include "templates/footer_tpl.php"; ?>
+
 
 </body>
 </html>

@@ -11,7 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-
+<!-- RESPONSIVE DESIGN -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<title>Ludovic FAURE - Contact</title>
 </head>
 
@@ -21,25 +22,23 @@
 
 <main>
 
-	<section class="container_CV">
-		
-		<!-- <img src="images/contact.jpg" alt=""> -->
+	<section class="container_Contact">
 
 		<!-- Formulaire de contact -->
-		<form action="" method="post" class="form_Contact">
+		<form action="contact.php" method="post" class="form_Contact">
 			
-			<input type="text" name="nom" placeholder="Votre nom">
+			<input type="text" name="nom" placeholder="Votre nom*" required="required">
 			
-			<input type="text" name="prenom" placeholder="Votre prénom">
+			<input type="text" name="prenom" placeholder="Votre prénom*" required="required">
 		
-			<input type="email" name="mail" placeholder="Votre e-mail">
+			<input type="email" name="mail" placeholder="Votre e-mail*" required="required">
 
 			<p>
-			<textarea placeholder="Votre message"></textarea>
+			<textarea name="message" placeholder="Votre message*" required="required"></textarea>
 			</p>
 
 			<p>
-			<input type="submit">
+			<input type="submit" value="Envoyer">
 			</p>
 
 		</form>
@@ -47,9 +46,11 @@
 	</section>
 
 </main>
-
+<!-- JS -->
+	<!-- Menu mobile -->
+	<script src="js/menu_mobile.js"></script>
 <!-- Footer avec menu navigation -->
-<?php include "templates/footer_tpl.php"; ?>
+
 
 </body>
 </html>

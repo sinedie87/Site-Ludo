@@ -1,13 +1,20 @@
+/********************** A SAVOIR **********************
+*	Utilisation de multiple de 8 pour les px		  *
+*	1rem = 16px										  *
+*	Ex : 8px = 0.5rem, 16px = 1rem etc				  *
+/******************************************************/
+
+
 	/****** GLOBAL ******/
 
 body {
 	margin: 0 auto;
+	box-sizing: content-box;
 	/*font-family: 'Indie Flower', cursive;*/
 	font-family: 'Poiret One', cursive;
 	color: white;
 	background-image: url(../images/background.jpg);
-	/*background-origin: border-box;*/
-	/*background-repeat: no-repeat;*/
+	background-size: cover;
 }
 
 /* Class pour page active */
@@ -15,32 +22,29 @@ body {
 	background-color: #82ccdd;
 }
 
-	/****** HEADER, FOOTER, NAV ******/
-header, footer {
-	/*background-color: #808e9b/*#aaa69d*/;*/
-	
+.menu_mobile {
+	display: none;
 }
 
-.style {
-	background-color: rgba(255, 255, 255, 0.4);
+	/****** HEADER, FOOTER, NAV ******/
+
+header nav, footer nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 16vh;
-	margin: 16px 256px;
-}
-
-header nav {
-	margin: 32px;
+	background-color: rgba(255, 255, 255, 0.4);
+	height: 5rem;
+	margin: 1rem 16rem;
 }
 
 header nav a, footer nav a {
-	padding: 0px 32px;
-	list-style-type: none;
+	padding: 0 1rem;
+	margin: 0 1rem;
 	text-decoration: none;
 	color: #808e9b;
 	background-color: #2f3542;
-	/*transition: all 1s ease-out;*/
+	width: 5rem;
+	text-align: center;
 }
 
 header nav a:hover, footer nav a:hover {
@@ -48,49 +52,33 @@ header nav a:hover, footer nav a:hover {
 	color: #808e9b;
 }
 
-	/***** MAIN *****/
+/********** PAGE ACCUEIL **********/
 
-main {
-	/*background-image: url(../images/fd.png);*/
-	background-attachment: fixed;
-	color: white;
-}
-
-.oblique {
-	transform: skew(-15deg);
-}
-
-	/***** PAGE ACCUEIL *****/
-
-.container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.portrait {
-	margin: 16px 0px;
-	border-radius: 50%;
-	text-align: center;
-}
-
-h1.accueil {
+h1 {
 	font-family: 'Monofett', cursive;
-	font-size: 128px;
+	font-size: 8rem;
 	margin: 0;
 	text-align: center;
 }
+
+h2.accueil {
+	font-family: 'Monofett', cursive;
+	font-size: 4rem;
+	margin: 0;
+	text-align: center;
+}
+
 .description article {
-	border: 2px solid #FFF;
+	border: 0.125rem solid #FFF;
 	width: 70%;
-	margin: 32px auto;
-	font-size: 32px;
+	margin: 2rem auto;
+	font-size: 2rem;
 	text-align: center;
 }
 
 .description article a {
-	font-size: 16px;
-	padding: 0 32px;
+	font-size: 1rem;
+	padding: 0 2rem;
 	list-style-type: none;
 	text-decoration: none;
 	color: #808e9b;
@@ -99,58 +87,83 @@ h1.accueil {
 
 section.oblique {
 	text-align: right;
-	margin: 16px;
+	margin: 1rem;
 }
 
 /********** PAGE CV **********/
 
 .experience, .competence, .formation {
-	/*padding: 8px;*/
-	text-align: center;
-	width: 60%;
-	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 70%;
+	margin: 2rem auto;
+	background-color: rgba(255, 255, 255, 0.4);
 }
 
 .experience h2, .competence h2, .formation h2 {
-	font-size: 64px;
-	margin: 32px;
+	text-align: center;
+	font-size: 4rem;
+	margin: 0 2rem 2rem 2rem;
+	flex-basis: 100%;
+}
+
+.experience h3, .competence h3, .formation h3 {
+	margin: 2rem auto;
+	text-align: center;
+}
+
+h3.titleExp {
+	flex-basis: 40%;
+	text-align: left;
+}
+
+h3.titleExpBis {
+	flex-basis: 40%;
+	text-align: right;
+}
+
+h3.titleExp, h3.titleExpBis {
+	margin-bottom: 0;
+}
+
+iframe {
+	margin: 0.5rem 0;
 }
 
 .contentExp {
 	display: none;
 }
 
+.contentExp.hide {
+	margin: 1rem 0 auto;
+}
+
 .hide {
 	display: block;
-	width: 60%;
-}
-
-p.contentExp.hide {
-	margin: 0 auto;
-}
-
-.experience h3, .competence h3, .formation h3, .experience p {
-	margin: 32px;
+	width: 100%;
+	text-align: center;
+/*flex-basis: 100%*/
 }
 
 /********** PAGE PHOTO **********/
 
 img.carrousel_photo {
-	border: 2px solid #FFF;
+	border: 0.125rem solid #FFF;
 }
 
 #slider-previous {
 	position: absolute;
-	left: 50px;
-	top: 290px;
+	left: 3.125rem;
+	top: 18.125rem;
 	/*font-size: 1em;*/
 	/*z-index: 2;*/
 }
 
 #slider-next {
 	position: absolute;
-	left: 890px;
-	top: 290px;
+	left: 55.625rem;
+	top: 18.125rem;
 	/*z-index: 2;*/
 }
 
@@ -158,63 +171,254 @@ img.carrousel_photo {
 
 .container_CV {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
-	background-image: url(../images/contact.jpg);
-	height: 922px;
-
-}
-
-.container_CV img {
-	width: 200px;
-	height: 200px;
+	background-color: rgba(255, 255, 255, 0.4);
+	width: 50rem;
+	height: 33.375rem;
+	margin: 0 auto;
 }
 
 .form_Contact {
 	text-align: center;
-	padding: 16px;
-}
-
-input {
-	padding: 8px;
-	width: 140px;
-	border: none;
-}
-
-textarea {
-	resize: none;
-	width: 460px; 
-	height: 175px; 
-	padding: 8px;
-	margin: 0 auto;
-	border: none;
-}
-
-input[type=submit], input[type=reset]{
- max-width: 100%;
- padding: 8px;
- margin-right: 10px;
- cursor: pointer;
- color: #808e9b/*#33d9b2*/;
-}
-
-::placeholder {
-  color: #808e9b/*#33d9b2*/;
-  text-align: center;
 }
 
 /********** PAGE ADMIN **********/
 
-
 .form_Admin {
-	/*display: flex;
-	flex-direction: column;*/
-	/*align-content: center;*/
-	width: 620px;
+	width: 38.75rem;
 	margin: 0 auto;
 	text-align: center;
-	padding: 16px;
 }
+
+h1.lienAdmin {
+	font-size: 4rem;
+}
+
+.lienAdmin {
+	text-align: center;
+	margin: 0.5rem;
+	text-decoration: none;
+	color: #808e9b;
+	background-color: #2f3542;
+	padding: 0.5rem 2rem;
+	flex-basis: 100%;
+
+}
+
+ input[type=date], input[type=text], input[type=email] {
+ 	margin: 0.5rem;
+	padding: 0.5rem;
+	width: 8.75rem;
+	height: 1rem;
+	border: none;
+ 	color: #808e9b;
+}
+
+input[type=submit], input[type=reset] {
+	width: 9.75rem;
+	height: 2rem;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	border: none;
+ 	color: #808e9b;
+ 	cursor: pointer;
+}
+
+textarea {
+	resize: none;
+	width: 31rem; 
+	height: 10.9375rem; 
+	padding: 0.5rem;
+	margin: 0 auto;
+	border: none;
+}
+
+::placeholder {
+  color: #808e9b;
+  text-align: center;
+}
+
+/********** PAGE CONNECT **********/
+
+ input[type=password] {
+ 	margin: 0.5rem;
+	padding: 0.5rem;
+	width: 8.75rem;
+	height: 1rem;
+	border: none;
+ 	color: #808e9b;
+}
+
+/******************** VERSION RESPONSIVE ********************/
+
+@media screen and (max-width: 480px) { 
+
+/********** MENU **********/
+
+	.menu_mobile {
+		display: block;
+		background-color: #2f3542;
+		height: 2rem;
+		width: 100%;
+		padding: 0.5rem 0rem;
+		text-align: center;
+		line-height: 2rem;
+	}
+
+	.menu {
+		margin-top: -13rem;
+	}
+
+	.menu_close {
+		top: 15.5rem;
+		position: relative;
+	}
+
+	header nav, footer nav {
+		flex-direction: column;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	header nav a, footer nav a {
+		padding: 0.5rem;
+		width: 100%;
+	}
+
+/********** PAGE ACCUEIL **********/
+
+	.description article, .portrait h1 {
+		width: 95%;
+	}
+
+	h1 {
+		font-size: 4rem;
+		margin-top: 4rem;
+	}
+
+	h2.accueil {
+		font-size: 2rem;
+	}
+
+/********** PAGE CV **********/
+
+	.experience, .competence, .formation {
+		width: 95%;
+		margin: 4rem auto;
+	}
+
+	.experience h2, .competence h2, .formation h2 {
+		font-size: 2rem;
+	}
+
+	.contentExp {
+		display: block;
+		text-align: center;
+	}
+
+	iframe {
+		width: 17.5rem;
+		height: 10rem;
+	}
+
+/********** PAGE CONTACT **********/
+
+	.container_Contact {
+		width: 95%;
+		margin: 4rem auto;
+	}
+
+	.form_Contact {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.form_Contact input {
+		margin: 0.5rem auto;
+
+	}
+	.form_Contact textarea {
+		width: 17rem;
+	}
+
+/********** PAGE ADMIN **********/
+	
+	h1.lienAdmin {
+		font-size: 1rem;
+		margin-top: 4rem;
+	}
+	
+/********** PAGE CONNECT **********/
+	
+	.form_Admin {
+		width: 95%;
+		margin: 4rem auto;
+	}
+
+/********** PAGE ADD **********/
+
+	.form_Admin textarea {
+		width: 17rem;
+	}
+
+	fieldset {
+		padding: 0rem;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) { 
+
+/********** MENU **********/
+
+	.menu_mobile {
+		display: none;
+	}
+
+	header nav, footer nav {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	header nav a, footer nav a {
+		padding: 0.5rem;
+		width: 100%;
+	}
+
+/********** PAGE ACCUEIL **********/
+
+	.description article, .portrait h1 {
+		width: 95%;
+	}
+
+/********** PAGE CV **********/
+
+	.experience, .competence, .formation {
+		width: 95%;
+	}
+
+/********** PAGE CONTACT **********/
+
+	.form_Contact {
+		margin-top: 2rem;
+	}
+
+/********** PAGE ADMIN **********/
+	
+	h1.lienAdmin {
+		font-size: 2rem;
+		margin: 2rem;
+	}
+
+/********** PAGE ADD/EDIT **********/
+
+	.form_Admin {
+		margin-top: 2rem;
+	}
+
+}
+
+
 
 
 

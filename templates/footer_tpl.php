@@ -2,9 +2,7 @@
 
 <footer>
 
-	<section class="style">
-
-		<nav class="oblique">
+		<nav>
 			
 			<!-- Affiche le menu commun à tous les visiteurs -->
 			<?= general_menu(); ?>
@@ -17,6 +15,5 @@
 				<?php endif; ?>
 
 		</nav>
-		
-	</section>
+	
 </footer>

@@ -11,16 +11,14 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-	<title>Ludovic FAURE - Photos</title>
+<!-- RESPONSIVE DESIGN -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Ludovic FAURE - Galerie</title>
 </head>
 
 <body>
 
-<?php include "templates/header_tpl.php"; ?>
-
-<main>
-
-	<section class="carrousel">
+<?php include "templates/header_tpl.php"; ?>	<section class="carrousel">
 	
 		<figure>
 			
@@ -32,8 +30,6 @@
 		<figure>
 			
 			<p id="miniature">
-
-				<!-- <li class="imgMin"></li> -->
 			
 			</p>
 
@@ -47,13 +43,15 @@
 	</section>
 
 </main>
-
+<!-- JS -->
+	<!-- Menu mobile -->
+	<script src="js/menu_mobile.js"></script>
 	<!-- Slider -->
 	<!-- <script src="js/slider.js" async></script> -->
 	<script src="js/newSlider.js" async></script>
 
 <!-- Footer avec menu navigation -->
-<?php include "templates/footer_tpl.php"; ?>
+
 
 </body>
 </html>

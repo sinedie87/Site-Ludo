@@ -8,9 +8,11 @@ include "utilities/menu.php"
 
 <header>
 
-	<section class="style">
+		<div class="menu_mobile">
+			Menu
+		</div>
 
-		<nav class="oblique">
+		<nav class="menu">
 
 			<!-- Affiche le menu commun à tous les visiteurs -->
 			<?= general_menu(); ?>
@@ -23,7 +25,5 @@ include "utilities/menu.php"
 				<?php endif; ?>
 
 		</nav>
-	
-	</section>
 
 </header>

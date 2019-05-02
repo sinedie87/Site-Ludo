@@ -21,7 +21,7 @@ $query_exp->closeCursor();
 /* Récupére les informations de la TABLE compétences */
 $query_comp = $pdo->prepare("SELECT *
 	FROM competences
-	ORDER BY id_comp DESC");
+	ORDER BY titre_comp ASC");
 
 $query_comp->execute();
 
@@ -34,7 +34,7 @@ $query_comp->closeCursor();
 /* Récupére les informations de la TABLE formations */
 $query_form = $pdo->prepare("SELECT *
 	FROM formations
-	ORDER BY id_form DESC");
+	ORDER BY date_end_form DESC");
 
 $query_form->execute();
 

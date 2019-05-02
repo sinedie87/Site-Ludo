@@ -5,48 +5,60 @@ session_start();
 
 include "utilities/pdo.php";
 
-/*Récupére les informations de la TABLE experiences */
-$query_exp = $pdo->prepare("SELECT * 
-	FROM experiences 
-	WHERE id = ?");
+if(isset($_GET) && !empty($_GET)){
 
-$idExp = $_GET["id"];
+	if(!empty($_GET['id'])){
+		
+		$idParam = $_GET['id'];
 
-$query_exp->execute([$idExp]);
+		/*Récupére les informations de la TABLE experiences */
+		$query_exp = $pdo->prepare("SELECT * 
+			FROM experiences 
+			WHERE id = ?");
 
-$experience = $query_exp->fetch(PDO::FETCH_ASSOC);
+		$query_exp->execute([$idParam]);
 
-$query_exp->closeCursor();
+		$experience = $query_exp->fetch(PDO::FETCH_ASSOC);
 
-/******************************************************************/
+		$query_exp->closeCursor();
 
-/* Récupére les informations de la TABLE compétences */
-$query_comp = $pdo->prepare("SELECT *
-	FROM competences
-	WHERE id_comp = ?");
+	}
 
-$idComp = $_GET["id_comp"];
+	elseif (!empty($_GET['id_comp'])){
+		
+		$idParam = $_GET['id_comp'];
 
-$query_comp->execute([$idComp]);
+		/* Récupére les informations de la TABLE compétences */
+		$query_comp = $pdo->prepare("SELECT *
+			FROM competences
+			WHERE id_comp = ?");
 
-$competence = $query_comp->fetch( PDO::FETCH_ASSOC );
+		$query_comp->execute([$idParam]);
 
-$query_comp->closeCursor();
+		$competence = $query_comp->fetch( PDO::FETCH_ASSOC );
 
-/******************************************************************/
+		$query_comp->closeCursor();
 
-/* Récupére les informations de la TABLE formations */
-$query_form = $pdo->prepare("SELECT *
-	FROM formations
-	WHERE id_form = ?");
+	}
 
-$idForm = $_GET["id_form"];
+	elseif(!empty($_GET['id_form'])){
+		
+		$idParam = $_GET['id_form'];
 
-$query_form->execute([$idForm]);
+		/* Récupére les informations de la TABLE formations */
+		$query_form = $pdo->prepare("SELECT *
+			FROM formations
+			WHERE id_form = ?");
 
-$formation = $query_form->fetch( PDO::FETCH_ASSOC );
+		$query_form->execute([$idParam]);
 
-$query_form->closeCursor();
+		$formation = $query_form->fetch( PDO::FETCH_ASSOC );
+
+		$query_form->closeCursor();
+
+	}
+	
+}
 
 include "templates/edit_tpl.php";
 

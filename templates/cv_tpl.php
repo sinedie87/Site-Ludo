@@ -11,6 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<!-- RESPONSIVE DESIGN -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<title>Ludovic FAURE - Expériences</title>
 </head>
 
@@ -47,7 +49,10 @@
 						}
 					}
 					?> -->
-				
+				</h3>
+
+				<h3 class="titleExpBis">
+
 					<?= $experience["titre"]; ?>
 
 				</h3>
@@ -57,7 +62,7 @@
 
 					<!-- Permet de n'afficher que la balise iframe là où il y a une vidéo. Evite un bloc vide de 560 par 315 dans le HTML si pas de vidéo-->
 					<?php if(!empty($experience["links"])): ?>
-						<iframe width="560" height="315" src="<?= $experience['links']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="560" height="320" src="<?= $experience['links']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<?php endif; ?>
 				</p>
 
@@ -71,7 +76,7 @@
 
 		<?php foreach ($competences as $competence): ?>
 
-				<h3 class="titleExp">
+				<h3>
 
 					<?= $competence["titre_comp"] ?>
 					<?= $competence["contenu_comp"] ?>
@@ -88,7 +93,7 @@
 
 		<?php foreach ($formations as $formation): ?>
 
-				<h3 class="titleExp">
+				<h3>
 
 					<!-- Si dates identiques, n'affiche que date_end renommée en dates -->
 					<?php if($formation["date_start_form"] == $formation["dates_form"]): ?>
@@ -109,12 +114,14 @@
 	</section>
 
 </main>
-
+<!-- JS -->
+	<!-- Menu mobile -->
+	<script src="js/menu_mobile.js"></script>
 	<!-- Affiche/Masque bloc CV -->
 	<script src="js/cv.js"></script>
 
 <!-- Footer avec menu navigation -->
-<?php include "templates/footer_tpl.php"; ?>
+
 
 </body>
 </html>

@@ -42,7 +42,8 @@
 
 				<input type="text" name="links" value="<?= $experience['links'] ?>">
 
-				<input type="submit" value="Mettre à jour"><input type="reset" value="Effacer">
+				<input type="submit" value="Mettre à jour"><!--<input type="reset" value="Effacer">-->Oui<input type="radio" name="visibilite" value="1">
+				Non<input type="radio" name="visibilite" value="0">
 
 		</fieldset>
 

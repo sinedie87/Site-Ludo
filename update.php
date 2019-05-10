@@ -15,15 +15,16 @@ if(isset($_POST)){
 	$date_start = htmlspecialchars($_POST["date_start"]);
 	$date_end = htmlspecialchars($_POST["date_end"]);
 	$links = htmlspecialchars($_POST["links"]);
+	$visibilite = $_POST["visibilite"];
 
 $query_exp = $pdo->prepare("UPDATE experiences 
-	SET titre = ?, contenu = ?, date_start = ?, date_end = ?, links = ? 
+	SET titre = ?, contenu = ?, date_start = ?, date_end = ?, links = ?, visibilite = ? 
 	WHERE id = ?");
 
 $idExp = $_GET["id"];
 
 $query_exp->execute(
-	[$titre, $contenu, $date_start, $date_end, $links, $idExp]
+	[$titre, $contenu, $date_start, $date_end, $links, $visibilite, $idExp]
 );
 
 $query_exp->closeCursor();

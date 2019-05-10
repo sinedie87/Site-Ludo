@@ -5,6 +5,7 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
+	<meta name="description" content="Passionné par les arts martiaux et la cascade, j'ai décidé d'en faire mon métier." />
 <!-- FONTAWESOME -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <!-- CSS -->
@@ -12,14 +13,16 @@
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 <!-- TITRE -->
-	<link href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Outline" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
 <!-- RESPONSIVE DESIGN -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-	<title>Ludovic FAURE - Accueil</title>
+	<title>Ludovic FAURE - Cascadeur spécialisé dans les arts martiaux</title>
 </head>
 
-<body>
+<body onload="title()">
 
 	<?php include "templates/header_tpl.php"; ?>
 
@@ -38,6 +41,8 @@
 		<section class="description">
 
 			<article>
+				
+				<h3>Taille : 1m84   |   Poids : 84kg</h3>
 				
 				<p>Mon parcours démarre à l'âge de 5 ans quand je débute le Karate Shotokan. Je me passionne alors pour le vaste monde des arts martiaux que je n'ai de cesse de découvrir.</p>
 

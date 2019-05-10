@@ -5,14 +5,15 @@
 /******************************************************/
 
 
-	/****** GLOBAL ******/
+/****** GLOBAL ******/
 
 body {
 	margin: 0 auto;
+	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 	/*font-family: 'Indie Flower', cursive;*/
 	font-family: 'Poiret One', cursive;
-	color: white;
+	color: #fff;
 	background-image: url(../images/background.jpg);
 	background-size: cover;
 }
@@ -26,19 +27,25 @@ body {
 	display: none;
 }
 
-	/****** HEADER, FOOTER, NAV ******/
+/****** HEADER, FOOTER, NAV ******/
 
 header nav, footer nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	background-color: rgba(255, 255, 255, 0.4);
 	height: 5rem;
-	margin: 1rem 16rem;
+	margin: 1rem 16rem 3rem;
 }
 
 header nav a, footer nav a {
-	padding: 0 1rem;
+	padding: 0.5rem 1rem;
 	margin: 0 1rem;
 	text-decoration: none;
 	color: #808e9b;
@@ -55,22 +62,25 @@ header nav a:hover, footer nav a:hover {
 /********** PAGE ACCUEIL **********/
 
 h1 {
-	font-family: 'Monofett', cursive;
+	/*font-family: 'Monofett', cursive;*/
+	/*font-family: 'Bungee Outline', cursive;*/
+	font-family: 'Bungee Shade', cursive;
 	font-size: 8rem;
 	margin: 0;
 	text-align: center;
 }
 
 h2.accueil {
-	font-family: 'Monofett', cursive;
+	/*font-family: 'Monofett', cursive;*/
+	font-family: 'Bungee Outline', cursive;
 	font-size: 4rem;
-	margin: 0;
+	margin: 2rem 0;
 	text-align: center;
 }
 
 .description article {
-	border: 0.125rem solid #FFF;
-	width: 70%;
+	outline: 0.125rem solid #FFF;
+	width: 80%;
 	margin: 2rem auto;
 	font-size: 2rem;
 	text-align: center;
@@ -93,10 +103,16 @@ section.oblique {
 /********** PAGE CV **********/
 
 .experience, .competence, .formation {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
 	flex-direction: row;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	width: 70%;
+	width: 80%;
 	margin: 2rem auto;
 	background-color: rgba(255, 255, 255, 0.4);
 }
@@ -105,7 +121,12 @@ section.oblique {
 	text-align: center;
 	font-size: 4rem;
 	margin: 0 2rem 2rem 2rem;
+	-ms-flex-preferred-size: 100%;
 	flex-basis: 100%;
+}
+
+.experience h2 {
+	margin-bottom: 0;
 }
 
 .experience h3, .competence h3, .formation h3 {
@@ -113,43 +134,69 @@ section.oblique {
 	text-align: center;
 }
 
+.experience p {
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+	text-align: center;
+	margin-top: 0;
+}
+
+.experience a {
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 2rem;
+}
+
+#cv {
+	color: #82ccdd;
+}
+
 h3.titleExp {
+	text-transform: uppercase;
+}
+
+h3.titleExp {
+	-ms-flex-preferred-size: 40%;
 	flex-basis: 40%;
 	text-align: left;
 }
 
 h3.titleExpBis {
-	flex-basis: 40%;
+	-ms-flex-preferred-size: 45%;
+	flex-basis: 45%;
 	text-align: right;
 }
 
-h3.titleExp, h3.titleExpBis {
-	margin-bottom: 0;
+.h3 {
+	flex-basis: 100%;
 }
 
 iframe {
-	margin: 0.5rem 0;
+	margin-top: 2rem;
+	outline: 0.5rem solid;
 }
 
 .contentExp {
 	display: none;
 }
 
-.contentExp.hide {
-	margin: 1rem 0 auto;
-}
-
 .hide {
 	display: block;
-	width: 100%;
 	text-align: center;
-/*flex-basis: 100%*/
 }
 
 /********** PAGE PHOTO **********/
 
 img.carrousel_photo {
-	border: 0.125rem solid #FFF;
+	outline: 0.125rem solid #FFF;
+}
+
+figure {
+	text-align: center;
 }
 
 #slider-previous {
@@ -167,20 +214,30 @@ img.carrousel_photo {
 	/*z-index: 2;*/
 }
 
-/********** PAGE CONTACT **********/
-
-.container_CV {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: rgba(255, 255, 255, 0.4);
-	width: 50rem;
-	height: 33.375rem;
-	margin: 0 auto;
+.imageSmall {
+	outline: 0.25rem solid #fff;
 }
 
-.form_Contact {
+/********** PAGE VIDEO **********/
+
+.video {
 	text-align: center;
+}
+
+#showreel {
+	outline: 1rem solid;
+}
+
+/********** PAGE CONTACT **********/
+
+.container_Contact {
+	text-align: center;
+}
+
+.container_Contact p {
+	color: #82ccdd;
+	font-weight: bold;
+	font-size: 1.5rem;
 }
 
 /********** PAGE ADMIN **********/
@@ -202,17 +259,18 @@ h1.lienAdmin {
 	color: #808e9b;
 	background-color: #2f3542;
 	padding: 0.5rem 2rem;
+	-ms-flex-preferred-size: 100%;
 	flex-basis: 100%;
 
 }
 
- input[type=date], input[type=text], input[type=email] {
- 	margin: 0.5rem;
+input[type=date], input[type=text], input[type=email] {
+	margin: 0.5rem;
 	padding: 0.5rem;
 	width: 8.75rem;
 	height: 1rem;
 	border: none;
- 	color: #808e9b;
+	color: #808e9b;
 }
 
 input[type=submit], input[type=reset] {
@@ -221,8 +279,8 @@ input[type=submit], input[type=reset] {
 	margin: 0.5rem;
 	padding: 0.5rem;
 	border: none;
- 	color: #808e9b;
- 	cursor: pointer;
+	color: #808e9b;
+	cursor: pointer;
 }
 
 textarea {
@@ -234,27 +292,42 @@ textarea {
 	border: none;
 }
 
+::-webkit-input-placeholder {
+	color: #808e9b;
+	text-align: center;
+}
+
+:-ms-input-placeholder {
+	color: #808e9b;
+	text-align: center;
+}
+
+::-ms-input-placeholder {
+	color: #808e9b;
+	text-align: center;
+}
+
 ::placeholder {
-  color: #808e9b;
-  text-align: center;
+	color: #808e9b;
+	text-align: center;
 }
 
 /********** PAGE CONNECT **********/
 
- input[type=password] {
- 	margin: 0.5rem;
+input[type=password] {
+	margin: 0.5rem;
 	padding: 0.5rem;
 	width: 8.75rem;
 	height: 1rem;
 	border: none;
- 	color: #808e9b;
+	color: #808e9b;
 }
 
 /******************** VERSION RESPONSIVE ********************/
 
 @media screen and (max-width: 480px) { 
 
-/********** MENU **********/
+	/********** MENU **********/
 
 	.menu_mobile {
 		display: block;
@@ -276,6 +349,9 @@ textarea {
 	}
 
 	header nav, footer nav {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 		text-align: center;
 		margin: 0 auto;
@@ -286,14 +362,14 @@ textarea {
 		width: 100%;
 	}
 
-/********** PAGE ACCUEIL **********/
+	/********** PAGE ACCUEIL **********/
 
 	.description article, .portrait h1 {
 		width: 95%;
 	}
 
 	h1 {
-		font-size: 4rem;
+		font-size: 3rem;
 		margin-top: 4rem;
 	}
 
@@ -301,7 +377,11 @@ textarea {
 		font-size: 2rem;
 	}
 
-/********** PAGE CV **********/
+	.description h3 {
+		font-size: 1.5rem;
+	}
+
+	/********** PAGE CV **********/
 
 	.experience, .competence, .formation {
 		width: 95%;
@@ -310,6 +390,15 @@ textarea {
 
 	.experience h2, .competence h2, .formation h2 {
 		font-size: 2rem;
+	}
+
+	.experience a {
+		font-size: 1rem;
+		margin: 0;
+	}
+
+	#infos {
+		display: none;
 	}
 
 	.contentExp {
@@ -322,7 +411,17 @@ textarea {
 		height: 10rem;
 	}
 
-/********** PAGE CONTACT **********/
+	/********** PAGE VIDEO **********/
+
+	.video {
+		margin-top: 5rem;
+	}
+
+	#showreel {
+		outline: 0.5rem solid;
+	}
+
+	/********** PAGE CONTACT **********/
 
 	.container_Contact {
 		width: 95%;
@@ -330,7 +429,12 @@ textarea {
 	}
 
 	.form_Contact {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 	}
 
@@ -342,21 +446,21 @@ textarea {
 		width: 17rem;
 	}
 
-/********** PAGE ADMIN **********/
+	/********** PAGE ADMIN **********/
 	
 	h1.lienAdmin {
 		font-size: 1rem;
 		margin-top: 4rem;
 	}
 	
-/********** PAGE CONNECT **********/
+	/********** PAGE CONNECT **********/
 	
 	.form_Admin {
 		width: 95%;
 		margin: 4rem auto;
 	}
 
-/********** PAGE ADD **********/
+	/********** PAGE ADD **********/
 
 	.form_Admin textarea {
 		width: 17rem;
@@ -369,7 +473,7 @@ textarea {
 
 @media screen and (min-width: 481px) and (max-width: 1024px) { 
 
-/********** MENU **********/
+	/********** MENU **********/
 
 	.menu_mobile {
 		display: none;
@@ -377,7 +481,7 @@ textarea {
 
 	header nav, footer nav {
 		text-align: center;
-		margin: 0 auto;
+		margin: 0rem auto 2rem;
 	}
 
 	header nav a, footer nav a {
@@ -385,45 +489,35 @@ textarea {
 		width: 100%;
 	}
 
-/********** PAGE ACCUEIL **********/
+	/********** PAGE ACCUEIL **********/
 
 	.description article, .portrait h1 {
 		width: 95%;
 	}
 
-/********** PAGE CV **********/
+	/********** PAGE CV **********/
 
 	.experience, .competence, .formation {
 		width: 95%;
 	}
 
-/********** PAGE CONTACT **********/
+	/********** PAGE CONTACT **********/
 
 	.form_Contact {
 		margin-top: 2rem;
 	}
 
-/********** PAGE ADMIN **********/
+	/********** PAGE ADMIN **********/
 	
 	h1.lienAdmin {
 		font-size: 2rem;
 		margin: 2rem;
 	}
 
-/********** PAGE ADD/EDIT **********/
+	/********** PAGE ADD/EDIT **********/
 
 	.form_Admin {
 		margin-top: 2rem;
 	}
 
 }
-
-
-
-
-
-
-
-
-
-

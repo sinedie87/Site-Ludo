@@ -7,7 +7,7 @@ include "utilities/pdo.php";
 
 /* Ajout en BDD des expériences /*
 /* Condition pour éviter msg d'erreur quand champs non remplis */
-if(isset($_POST) && !empty($_POST["titre"]) && !empty($_POST["contenu"]) && !empty($_POST["date_start"]) && !empty($_POST["date_end"]) && !empty($_POST["links"])){
+if(isset($_POST) && !empty($_POST["titre"]) && !empty($_POST["contenu"]) && !empty($_POST["date_start"]) && !empty($_POST["date_end"]) && !empty($_POST["links"]) && !empty($_POST["visibilite"])){
 
 	/* Variable de stockage infos saisies par utilisateur protégées
 	contre XSS */
@@ -16,11 +16,13 @@ if(isset($_POST) && !empty($_POST["titre"]) && !empty($_POST["contenu"]) && !emp
 	$date_start = htmlspecialchars($_POST["date_start"]);
 	$date_end = htmlspecialchars($_POST["date_end"]);
 	$links = htmlspecialchars($_POST["links"]);
+	$visibilite = $_POST["visibilite"];
 
-$query_exp = $pdo->prepare("INSERT INTO experiences(titre, contenu, date_start, date_end, links)
-	VALUES(?, ?, ?, ?, ?)");
 
-$query_exp->execute([$titre, $contenu, $date_start, $date_end, $links]);
+$query_exp = $pdo->prepare("INSERT INTO experiences(titre, contenu, date_start, date_end, links, visibilite)
+	VALUES(?, ?, ?, ?, ?, ?)");
+
+$query_exp->execute([$titre, $contenu, $date_start, $date_end, $links, $visibilite]);
 
 $query_exp->closeCursor();
 

@@ -51,7 +51,6 @@ let tabSmallImg = [ { image : "images/carrousel/1.jpg"},
 	{ image : "images/carrousel/5.jpg"}
 ];
 
-
 function displayImageSmall(){
 
 	for(let i = 0; i < tabSmallImg.length; i++){
@@ -62,7 +61,6 @@ function displayImageSmall(){
 
 		imageSmall.src = tabSmallImg[i].image;
 	}
-
 }
 
 displayImageSmall();

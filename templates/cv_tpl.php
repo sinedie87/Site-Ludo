@@ -5,6 +5,7 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
+	<meta name="description" content="Toutes mes expériences, formations et compétences sont listées sur cette page. Entre autres, arts martiaux, cascades etc." />
 <!-- FontAwesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <!-- CSS -->
@@ -13,7 +14,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 <!-- RESPONSIVE DESIGN -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>Ludovic FAURE - Expériences</title>
+	<title>Ludovic FAURE - Parcours</title>
 </head>
 
 <body>
@@ -24,10 +25,15 @@
 
 	<section class="experience">
 
-	<h2>Expériences :</h2>
+	<h2>Mon parcours :</h2>
+
+	<p id="infos">(Cliquez sur les lignes de mon parcours pour avoir plus d'informations)</p>
+
+	<a id="cv" href="datas/CVLudovicFaure.pdf">Télécharger mon CV</a>
 
 		<!-- Affiche les publications EXP stockées en BDD -->
 		<?php foreach($experiences as $experience): ?>
+<?php if($experience["visibilite"] == 1): ?>	
 
 				<h3 class="titleExp">
 					<!-- Si dates identiques, n'affiche que date_end renommée en dates -->
@@ -38,17 +44,6 @@
 						<?= strtoupper($experience["date_start"]); ?> à 
 						<?= strtoupper($experience["dates"]); ?>
 					<?php endif; ?>
-
-					<!-- Code pour afficher les mois en français vs anglais via le serveur (remplace le Set Local Time de MySQL) -->
-					<!-- <?php
-
-					for($i = 0; $i < sizeof($tab_months_numbers); $i++){
-						if($tab_months_numbers[$i] == substr($experience["publish_date"], 0, 2)){
-							echo $tab_mois[($tab_months_numbers[$i]-1)];
-							break;
-						}
-					}
-					?> -->
 				</h3>
 
 				<h3 class="titleExpBis">
@@ -56,15 +51,16 @@
 					<?= $experience["titre"]; ?>
 
 				</h3>
-				
 				<p class="contentExp">
 					<?= $experience["contenu"]; ?><br>
 
 					<!-- Permet de n'afficher que la balise iframe là où il y a une vidéo. Evite un bloc vide de 560 par 315 dans le HTML si pas de vidéo-->
-					<?php if(!empty($experience["links"])): ?>
+					<?php if(!empty($experience["links"]) && !($experience["links"] == "Aucun")): ?>
 						<iframe width="560" height="320" src="<?= $experience['links']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<?php endif; ?>
 				</p>
+
+<?php endif; ?>				
 
 		<?php endforeach; ?>
 	
@@ -72,11 +68,11 @@
 
 	<section class="competence">
 		
-	<h2>Compétences :</h2>
+	<h2>Mes compétences :</h2>
 
 		<?php foreach ($competences as $competence): ?>
 
-				<h3>
+				<h3 class="h3">
 
 					<?= $competence["titre_comp"] ?>
 					<?= $competence["contenu_comp"] ?>
@@ -89,11 +85,11 @@
 
 	<section class="formation">
 		
-	<h2>Formations :</h2>
+	<h2>Mes formations :</h2>
 
 		<?php foreach ($formations as $formation): ?>
 
-				<h3>
+				<h3 class="h3">
 
 					<!-- Si dates identiques, n'affiche que date_end renommée en dates -->
 					<?php if($formation["date_start_form"] == $formation["dates_form"]): ?>
@@ -105,7 +101,6 @@
 					<?php endif; ?>
 
 					<?= $formation["titre_form"] ?>
-
 
 				</h3>
 

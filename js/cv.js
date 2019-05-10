@@ -26,3 +26,16 @@ for(let i = 0; i < titleExpBis.length; i++){
 		contentExp[i].classList.toggle("hide");
 	});
 };
+
+
+/* Affiche TELECHARGER ou VISUALISER selon périphérique utilisé */
+
+/* Déclaration des variables */
+let cv = document.querySelector("#cv");
+let width = document.body.clientWidth;
+
+if(width < 769){
+
+	cv.textContent = "Visualiser mon CV";
+	cv.setAttribute("target", "_blank");
+}

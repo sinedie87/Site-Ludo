@@ -1,12 +1,15 @@
 /********** Minituare **********/
 
 /* Déclaration des variables */
-let imageSmall;
-let prevButton = document.querySelector("#slider-previous");
-let nextButton = document.querySelector("#slider-next");
-let index = 0;
-let slideToScroll = 3;
-let slideToShow = 1;
+let imageSmall
+let prevButton = document.querySelector("#slider-previous")
+let nextButton = document.querySelector("#slider-next")
+let miniature = document.getElementById("miniature")
+let carrouselPhoto = document.querySelector(".carrousel_photo")
+let index = 4
+let index1 = 4
+let index2 = 0
+let index3 = 1
 
 /* Tableau stockant les miniatures */
 let tabSmallImg = [ { image : "images/carrousel/1.jpg"},
@@ -14,36 +17,50 @@ let tabSmallImg = [ { image : "images/carrousel/1.jpg"},
   { image : "images/carrousel/3.jpg"},
   { image : "images/carrousel/4.jpg"},
   { image : "images/carrousel/5.jpg"}
-];
+]
 
 /* Fonction pour afficher les miniatures */
-function displayImageSmall(){
+function displayImageSmall () {
 
-  for(index; index < tabSmallImg.length; index++){
-
+  for ( let j = 0; j < 3; j++ ) {
     imageSmall = document.createElement("img");
     imageSmall.className = "imageSmall";
-    document.getElementById("miniature").appendChild(imageSmall);
-
+    miniature.appendChild(imageSmall);
+    index >= tabSmallImg.length ? index = 0 : null
     imageSmall.src = tabSmallImg[index].image;
+    index++
   }
-
 }
 
-displayImageSmall();
+displayImageSmall()
 
-// imageSmall.src = tabSmallImg[index].image;
+let allPictures = document.querySelectorAll(".imageSmall")
+
+carrouselPhoto.src = allPictures[1].src
+
+// allPictures[0].src = tabSmallImg[index1++].image
+// allPictures[1].src = tabSmallImg[index2++].image
+// allPictures[2].src = tabSmallImg[index3++].image
 
 /* Fonction pour faire défiler les prochaines images */
 function next(){
-  index++;
 
-  if(index >= tabSmallImg.length){
-    index = 0;
-  }
+  index1 >= tabSmallImg.length - 1 ? index1 = 0
+  : index2 >= tabSmallImg.length - 1 ? index2 = 0
+  : index3 >= tabSmallImg.length - 1 ? index3 = 0
+  : null
+  // if(index1 >= tabSmallImg.length || index2 >= tabSmallImg.length || index3 >= tabSmallImg.length){
+  //   index = 0
+  // }
+  // for(let i = 0; i < allPictures.length; i++){
 
-  displayImageSmall();
-  // imageSmall.src = tabSmallImg[index].image;
+    allPictures[0].src = tabSmallImg[index1++].image
+    allPictures[1].src = tabSmallImg[index2++].image
+    allPictures[2].src = tabSmallImg[index3++].image
+
+
+    carrouselPhoto.src = allPictures[1].src
+  // }
 }
 
 /* Fonction pour faire défiler les précédentes images */
@@ -54,7 +71,12 @@ function prev(){
     index = tabSmallImg.length -1;
   }
 
-  imageSmall.src = tabSmallImg[index].image;
+  for(let i = 0; i < allPictures.length; i++){
+
+    allPictures[i].src = tabSmallImg[index].image
+
+    carrouselPhoto.src = allPictures[1].src
+  }
 }
 
 /* Ajout des évènements sur les éléments concernés */

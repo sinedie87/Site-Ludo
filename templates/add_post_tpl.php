@@ -35,9 +35,9 @@
 
 			<textarea name="contenu" cols="30" rows="10" placeholder="Contenu" required="required"></textarea>
 
-			<input type="text" name="links" placeholder="Liens">
+			<input type="text" name="links" placeholder="Liens" required="required">
 
-			<input type="submit" value="Valider"><input type="reset" value="Effacer">
+			<input type="submit" value="Valider"><!--<input type="reset" value="Effacer">-->Oui<input type="radio" name="visibilite" value="1" required="required" checked>Non<input type="radio" name="visibilite" value="0" required="required">
 
 	</form>
 

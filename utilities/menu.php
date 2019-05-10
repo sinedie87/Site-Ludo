@@ -22,9 +22,9 @@ HTML;
 function general_menu(){
 
 	return link_menu("index.php", "Accueil").
-	link_menu("cv.php", "CV").
-	link_menu("photo.php", "Photos").
-	link_menu("#.php", "Vidéos").
+	link_menu("cv.php", "Parcours").
+	link_menu("photo.php", "Galerie").
+	link_menu("video.php", "Showreel").
 	link_menu("contact.php", "Contact");
 
 }

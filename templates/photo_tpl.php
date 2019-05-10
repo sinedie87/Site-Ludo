@@ -5,6 +5,7 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
+	<meta name="description" content="Mes réalisations en photos : arts martiaux, cascades, maniement d'armes, scènes de combat lors de représentations publiques (Puy Du Fou, Disney) ou privées.">
 <!-- FontAwesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <!-- CSS -->
@@ -19,19 +20,19 @@
 <body>
 
 <?php include "templates/header_tpl.php"; ?>	<section class="carrousel">
-	
+
+<main>
+
 		<figure>
 			
-			<img class="carrousel_photo" src="">
+			<img class="carrousel_photo">
 			<figcaption></figcaption>
 
 		</figure>
 
 		<figure>
 			
-			<p id="miniature">
-			
-			</p>
+			<p id="miniature"></p>
 
 		</figure>
 

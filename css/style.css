@@ -39,7 +39,7 @@ header nav, footer nav {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.2);
 	height: 5rem;
 	margin: 1rem 16rem 3rem;
 }
@@ -114,7 +114,7 @@ section.oblique {
 	flex-wrap: wrap;
 	width: 80%;
 	margin: 2rem auto;
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .experience h2, .competence h2, .formation h2 {
@@ -191,8 +191,21 @@ iframe {
 
 /********** PAGE PHOTO **********/
 
+.bigImg {
+	width: 800px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+#miniature {
+	height: 160px;
+	padding-top: 1rem;
+}
+
 img.carrousel_photo {
-	outline: 0.125rem solid #FFF;
+	outline: 1rem solid #FFF;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 figure {
@@ -201,21 +214,25 @@ figure {
 
 #slider-previous {
 	position: absolute;
-	left: 3.125rem;
-	top: 18.125rem;
-	/*font-size: 1em;*/
-	/*z-index: 2;*/
+	left: 20.25rem;
+	top: 52.5rem;
+	font-size: 2rem;
+	color: #FFF;
 }
 
 #slider-next {
 	position: absolute;
-	left: 55.625rem;
-	top: 18.125rem;
-	/*z-index: 2;*/
+	right: 20.25rem;
+	top: 52.5rem;
+	font-size: 2rem;
+	color: #FFF;
+
 }
 
 .imageSmall {
 	outline: 0.25rem solid #fff;
+	max-width: 240px;
+	height: 100%;
 }
 
 /********** PAGE VIDEO **********/
@@ -411,6 +428,23 @@ input[type=password] {
 		height: 10rem;
 	}
 
+	/********** PAGE PHOTO **********/
+
+	.bigImg {
+		margin-top: 5rem;
+		width: 85%;
+		height: 260px;
+	}
+
+	img.carrousel_photo {
+		outline: 0.5rem solid #FFF;
+	}
+
+	#miniature {
+		height: 4rem;
+		padding-top: 1rem;
+	}
+	
 	/********** PAGE VIDEO **********/
 
 	.video {
@@ -499,6 +533,16 @@ input[type=password] {
 
 	.experience, .competence, .formation {
 		width: 95%;
+	}
+
+	/********** PAGE PHOTO **********/
+	
+	.bigImg {
+		width: 90%;
+	}
+
+	#miniature {
+		padding-top: 1rem;
 	}
 
 	/********** PAGE CONTACT **********/

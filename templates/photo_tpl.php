@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="Mes réalisations en photos : arts martiaux, cascades, maniement d'armes, scènes de combat lors de représentations publiques (Puy Du Fou, Disney) ou privées.">
 <!-- FontAwesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
@@ -19,29 +19,27 @@
 
 <body>
 
-<?php include "templates/header_tpl.php"; ?>	<section class="carrousel">
+<?php include "templates/header_tpl.php"; ?>	
 
 <main>
 
-		<figure>
+		<figure class="bigImg">
 			
 			<img class="carrousel_photo">
 			<figcaption></figcaption>
 
 		</figure>
 
-		<figure>
+		<figure class="smallImg">
 			
-			<p id="miniature"></p>
+			<div id="miniature"></div>
 
 		</figure>
 
 		<nav class="toolbar">
-			<button id="slider-previous"><i class="fas fa-backward"></i></button>
-			<button id="slider-next"><i class="fas fa-forward"></i></button>
+			<button id="slider-previous"><i class="fas fa-arrow-alt-circle-left"></i></button>
+			<button id="slider-next"><i class="fas fa-arrow-alt-circle-right"></i></button>
 		</nav>
-
-	</section>
 
 </main>
 <!-- JS -->

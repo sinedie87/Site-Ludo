@@ -6,7 +6,6 @@
 
 
 /****** GLOBAL ******/
-
 body {
 	margin: 0 auto;
 	-webkit-box-sizing: content-box;
@@ -15,7 +14,6 @@ body {
 	font-family: 'Poiret One', cursive;
 	color: #fff;
 	background-image: url(../images/background.jpg);
-	background-size: cover;
 }
 
 /* Class pour page active */
@@ -25,6 +23,11 @@ body {
 
 .menu_mobile {
 	display: none;
+}
+
+p.echo {
+	text-align: center;
+	font-size: 2rem;
 }
 
 /****** HEADER, FOOTER, NAV ******/
@@ -214,19 +217,22 @@ figure {
 
 #slider-previous {
 	position: absolute;
-	left: 20.25rem;
+	left: 19.25rem;
 	top: 52.5rem;
 	font-size: 2rem;
 	color: #FFF;
+	background-color: transparent;
+    border: none;
 }
 
 #slider-next {
 	position: absolute;
-	right: 20.25rem;
+	right: 19.25rem;
 	top: 52.5rem;
 	font-size: 2rem;
 	color: #FFF;
-
+	background-color: transparent;
+    border: none;
 }
 
 .imageSmall {
@@ -441,8 +447,18 @@ input[type=password] {
 	}
 
 	#miniature {
-		height: 4rem;
+		height: 2.5rem;
 		padding-top: 1rem;
+	}
+
+	#slider-previous {
+		left: 0rem;
+		top: 24rem;
+	}
+
+	#slider-next {
+		right: 0rem;
+		top: 24rem;
 	}
 	
 	/********** PAGE VIDEO **********/
@@ -545,6 +561,16 @@ input[type=password] {
 		padding-top: 1rem;
 	}
 
+	#slider-previous {
+		left: 1rem;
+		top: 50.5rem;
+	}
+
+	#slider-next {
+		right: 1rem;
+		top: 50.5rem;
+	}
+
 	/********** PAGE CONTACT **********/
 
 	.form_Contact {
@@ -563,5 +589,4 @@ input[type=password] {
 	.form_Admin {
 		margin-top: 2rem;
 	}
-
 }

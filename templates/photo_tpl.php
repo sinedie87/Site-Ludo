@@ -6,22 +6,25 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="Mes réalisations en photos : arts martiaux, cascades, maniement d'armes, scènes de combat lors de représentations publiques (Puy Du Fou, Disney) ou privées.">
-<!-- FontAwesome -->
+	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<!-- CSS -->
+	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-<!-- RESPONSIVE DESIGN -->
+	<!-- RESPONSIVE DESIGN -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<!-- FAVICON -->
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="icon" type="image/png" href="images/logoLF.png">
 	<title>Ludovic FAURE - Galerie</title>
 </head>
 
 <body>
 
-<?php include "templates/header_tpl.php"; ?>	
+	<?php include "templates/header_tpl.php"; ?>	
 
-<main>
+	<main>
 
 		<figure class="bigImg">
 			
@@ -41,15 +44,15 @@
 			<button id="slider-next"><i class="fas fa-arrow-alt-circle-right"></i></button>
 		</nav>
 
-</main>
-<!-- JS -->
+	</main>
+	<!-- JS -->
 	<!-- Menu mobile -->
 	<script src="js/menu_mobile.js"></script>
 	<!-- Slider -->
 	<!-- <script src="js/slider.js" async></script> -->
 	<script src="js/newSlider.js" async></script>
 
-<!-- Footer avec menu navigation -->
+	<!-- Footer avec menu navigation -->
 
 
 </body>

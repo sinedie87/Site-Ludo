@@ -5,6 +5,7 @@
 function link_menu($href, $titre, $class = ''){
 
 	/* Ajoute $class quand utilisateur se trouve sur la page concernée */
+	// Enlever le chemin /Site... une fois le site en ligne
 	if($_SERVER["SCRIPT_NAME"] === "/Site Ludo/".$href){
 
 		$class = "current_page";
@@ -15,7 +16,7 @@ function link_menu($href, $titre, $class = ''){
 
 	<a href="$href" class="$class">$titre</a> 
 
-HTML;
+	HTML;
 }
 
 /* Fonction pour afficher le menu commun à tous les visiteurs */

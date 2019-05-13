@@ -5,51 +5,54 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
-<!-- FontAwesome -->
+	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<!-- CSS -->
+	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-<!-- RESPONSIVE DESIGN -->
+	<!-- RESPONSIVE DESIGN -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<!-- FAVICON -->
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="icon" type="image/png" href="images/logoLF.png">
 	<title>Ludovic FAURE - Connexion</title>
 </head>
 
 <body>
 
-<?php include "templates/header_tpl.php"; ?>
+	<?php include "templates/header_tpl.php"; ?>
 
-<main>
+	<main>
 
-<!-- Affiche le nom de l'utilisateur qui se connecte -->
-<?php if($_SESSION["connected"] = true && isset($mail)): ?>
-	<h1>Bonjour <?= $mail ?></h1>
-<?php else: ?>
-	
-	<section>
+		<!-- Affiche le nom de l'utilisateur qui se connecte -->
+		<?php if($_SESSION["connected"] = true && isset($mail)): ?>
+			<h1>Bonjour <?= $mail ?></h1>
+			<?php else: ?>
+				
+				<section>
 
-		<!-- Formulaire de connexion -->
-		<form action="" method="post" class="form_Admin">
-		
-			<input type="email" name="mail" placeholder="Votre e-mail">
+					<!-- Formulaire de connexion -->
+					<form action="" method="post" class="form_Admin">
+						
+						<input type="email" name="mail" placeholder="Votre e-mail">
 
-			<input type="password" name="password" placeholder="Votre mot de passe">
+						<input type="password" name="password" placeholder="Votre mot de passe">
 
-			<input type="submit">
+						<input type="submit">
 
-		</form>
+					</form>
 
-	</section>
-<?php endif; ?>
+				</section>
+			<?php endif; ?>
 
-</main>
-<!-- JS -->
-	<!-- Menu mobile -->
-	<script src="js/menu_mobile.js"></script>
+		</main>
+		<!-- JS -->
+		<!-- Menu mobile -->
+		<script src="js/menu_mobile.js"></script>
 
-<!-- Footer avec menu navigation -->
+		<!-- Footer avec menu navigation -->
 
 
-</body>
-</html>
+	</body>
+	</html>

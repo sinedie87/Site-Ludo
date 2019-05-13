@@ -1,7 +1,7 @@
 <!-- FICHIER POUR CONNEXION PDO -->
 <?php
 
-/* Connexion BDO */
+/* Connexion BDO version localhost*/
 $pdo = new PDO("mysql:host=localhost;dbname=ludo",
 	"root",
 	"root");

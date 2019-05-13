@@ -12,12 +12,12 @@ if(isset($_POST) && !empty($_POST["mail"]) && !empty($_POST["password"])){
 	$mail = $_POST["mail"];
 	$password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-$query_users = $pdo->prepare("INSERT INTO users(mail, password)
-			VALUES (?, ?)");
+	$query_users = $pdo->prepare("INSERT INTO users(mail, password)
+		VALUES (?, ?)");
 
-$query_users->execute([$mail, $password]);
+	$query_users->execute([$mail, $password]);
 
-$query_users->closeCursor();
+	$query_users->closeCursor();
 
 };
 

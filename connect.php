@@ -10,7 +10,7 @@ if(isset($_POST) && !empty($_POST["mail"]) && !empty($_POST["password"])){
 	$password = $_POST["password"];
 
 	$query = $pdo->prepare("SELECT * 
-			FROM users");
+		FROM users");
 
 	$query->execute();
 
@@ -23,18 +23,18 @@ if(isset($_POST) && !empty($_POST["mail"]) && !empty($_POST["password"])){
 	$passwordDB = $users["password"];
 	$password_check = password_verify($password, $passwordDB);
 
-		if($mail == $mailDB && $password == $password_check){
+	if($mail == $mailDB && $password == $password_check){
 
-			session_start();
-			$_SESSION["connected"] = true;
-			$_SESSION["status"] = $users["status"];
+		session_start();
+		$_SESSION["connected"] = true;
+		$_SESSION["status"] = $users["status"];
 
-			header("Location: admin.php");
+		header("Location: admin.php");
 
-		}
-		else{
-			echo "Les informations saisies semblent incorrectes";
-		}
+	}
+	else{
+		echo "Les informations saisies semblent incorrectes";
+	}
 };
 
 include "templates/connect_tpl.php";

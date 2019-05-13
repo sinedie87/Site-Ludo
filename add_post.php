@@ -19,12 +19,12 @@ if(isset($_POST) && !empty($_POST["titre"]) && !empty($_POST["contenu"]) && !emp
 	$visibilite = $_POST["visibilite"];
 
 
-$query_exp = $pdo->prepare("INSERT INTO experiences(titre, contenu, date_start, date_end, links, visibilite)
-	VALUES(?, ?, ?, ?, ?, ?)");
+	$query_exp = $pdo->prepare("INSERT INTO experiences(titre, contenu, date_start, date_end, links, visibilite)
+		VALUES(?, ?, ?, ?, ?, ?)");
 
-$query_exp->execute([$titre, $contenu, $date_start, $date_end, $links, $visibilite]);
+	$query_exp->execute([$titre, $contenu, $date_start, $date_end, $links, $visibilite]);
 
-$query_exp->closeCursor();
+	$query_exp->closeCursor();
 
 };
 
@@ -39,12 +39,12 @@ if(isset($_POST) && !empty($_POST["titre_comp"]) && !empty($_POST["contenu_comp"
 	$titre_comp = htmlspecialchars($_POST["titre_comp"]);
 	$contenu_comp = htmlspecialchars($_POST["contenu_comp"]);
 
-$query_comp = $pdo->prepare("INSERT INTO competences(titre_comp, contenu_comp)
-	VALUES(?, ?)");
+	$query_comp = $pdo->prepare("INSERT INTO competences(titre_comp, contenu_comp)
+		VALUES(?, ?)");
 
-$query_comp->execute([$titre_comp, $contenu_comp]);
+	$query_comp->execute([$titre_comp, $contenu_comp]);
 
-$query_comp->closeCursor();
+	$query_comp->closeCursor();
 
 };
 
@@ -61,12 +61,12 @@ if(isset($_POST) && !empty($_POST["date_start_form"]) && !empty($_POST["date_end
 	$date_end_form = htmlspecialchars($_POST["date_end_form"]);
 
 
-$query_form = $pdo->prepare("INSERT INTO formations(titre_form, date_start_form, date_end_form)
-	VALUES(?, ?, ?)");
+	$query_form = $pdo->prepare("INSERT INTO formations(titre_form, date_start_form, date_end_form)
+		VALUES(?, ?, ?)");
 
-$query_form->execute([$titre_form, $date_start_form, $date_end_form]);
+	$query_form->execute([$titre_form, $date_start_form, $date_end_form]);
 
-$query_form->closeCursor();
+	$query_form->closeCursor();
 
 };
 

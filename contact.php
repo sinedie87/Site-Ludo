@@ -10,7 +10,7 @@ if($_POST && !empty($_POST)){
 
 	$nom = $_POST["nom"];
 	$prenom = $_POST["prenom"];
-	$mail = $_POST["mail"];
+	$mail = filter_var($_POST["mail"], FILTER_VALIDATE_EMAIL);
 	$message = $_POST["message"];
 
 	$headers  = "MIME-Version: 1.0 \n";

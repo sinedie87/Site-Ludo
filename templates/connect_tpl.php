@@ -25,9 +25,9 @@
 	<main>
 
 		<!-- Affiche le nom de l'utilisateur qui se connecte -->
-		<?php if($_SESSION["connected"] = true && isset($mail)): ?>
+<!-- 		<?php if($_SESSION["connected"] = true && isset($mail)): ?>
 			<h1>Bonjour <?= $mail ?></h1>
-			<?php else: ?>
+			<?php else: ?> -->
 				
 				<section>
 
@@ -43,7 +43,8 @@
 					</form>
 
 				</section>
-			<?php endif; ?>
+				
+			<!-- <?php endif; ?> -->
 
 		</main>
 		<!-- JS -->

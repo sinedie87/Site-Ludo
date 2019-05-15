@@ -25,21 +25,26 @@ if(isset($_POST) && !empty($_POST["mail"]) && !empty($_POST["password"])){
 	$passwordDB = $users["password"];
 	$password_check = password_verify($password, $passwordDB);
 
-	if($mail === $mailDB && $password_check){
 
-		session_start();
-		$_SESSION["connected"] = true;
-		$_SESSION["status"] = $users["status"];
+	if($users){
+		if($mail === $mailDB && $password_check){
 
-		header("Location: admin.php");
+			session_start();
+			$_SESSION["connected"] = true;
+			$_SESSION["status"] = $users["status"];
 
-	}
-	else{
-		echo "Les informations saisies semblent incorrectes";
+			header("Location: admin.php");
+
+		}
+		else{
+			echo "<p class='echo'> Les informations saisies semblent incorrectes </p>";
+		}
+	}else{
+		echo "<p class='echo'> Utilisateur introuvable </p>";
 	}
 };
 
-var_dump($mail, $mailDB, $password, $passwordDB, $password_check);
+
 
 include "templates/connect_tpl.php";
 

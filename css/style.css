@@ -228,7 +228,7 @@ figure {
 	left: 19.25rem;
 	top: 52.5rem;
 	font-size: 2rem;
-	color: rgb(128, 142, 155, 0.7);
+	color: rgb(128, 142, 155);
 	background-color: transparent;
     border: none;
 }
@@ -238,7 +238,7 @@ figure {
 	right: 19.25rem;
 	top: 52.5rem;
 	font-size: 2rem;
-	color: rgb(128, 142, 155, 0.7);
+	color: rgb(128, 142, 155);
 	background-color: transparent;
     border: none;
 }
@@ -451,7 +451,7 @@ input[type=password] {
 	}
 
 	img.carrousel_photo {
-		outline: 0.5rem solid #FFF;
+		outline: 0.5rem solid rgb(128, 142, 155, 0.7);
 	}
 
 	#miniature {
@@ -476,7 +476,7 @@ input[type=password] {
 	}
 
 	#showreel {
-		outline: 0.5rem solid;
+		outline: 0.5rem solid rgb(128, 142, 155, 0.7);
 	}
 
 	/********** PAGE CONTACT **********/

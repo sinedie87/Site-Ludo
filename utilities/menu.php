@@ -12,11 +12,11 @@ function link_menu($href, $titre, $class = ''){
 	}
 
 	/* Crée le HTML */
-	return <<<HTML
+return <<<HTML
 
 	<a href="$href" class="$class">$titre</a> 
 
-	HTML;
+HTML;
 }
 
 /* Fonction pour afficher le menu commun à tous les visiteurs */

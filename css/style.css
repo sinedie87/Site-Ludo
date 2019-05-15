@@ -4,14 +4,14 @@
 *	Ex : 8px = 0.5rem, 16px = 1rem etc				  *
 /******************************************************/
 
-
 /****** GLOBAL ******/
 body {
 	margin: 0 auto;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
-	/*font-family: 'Indie Flower', cursive;*/
-	font-family: 'Poiret One', cursive;
+	/*font-family: 'Poiret One', cursive;*/
+	font-family: 'Lato', sans-serif;
+	font-weight: lighter;
 	color: #fff;
 	background-image: url(../images/background.jpg);
 }
@@ -42,7 +42,9 @@ header nav, footer nav {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	background-color: rgba(255, 255, 255, 0.2);
+	/*background-color: rgba(255, 255, 255, 0.2);*/
+	/*background-color: rgb(47, 53, 66, 0.9);*/
+	background-color: rgb(128, 142, 155, 0.7);
 	height: 5rem;
 	margin: 1rem 16rem 3rem;
 }
@@ -65,19 +67,21 @@ header nav a:hover, footer nav a:hover {
 /********** PAGE ACCUEIL **********/
 
 h1 {
-	/*font-family: 'Monofett', cursive;*/
-	/*font-family: 'Bungee Outline', cursive;*/
-	font-family: 'Bungee Shade', cursive;
-	font-size: 8rem;
-	margin: 0;
+	/*font-family: 'Bungee Shade', cursive;*/
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	font-size: 10rem;
+	margin: 6rem 0 0 0;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 h2.accueil {
-	/*font-family: 'Monofett', cursive;*/
-	font-family: 'Bungee Outline', cursive;
+	/*font-family: 'Bungee Outline', cursive;*/
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
 	font-size: 4rem;
-	margin: 2rem 0;
+	margin: 0 0 8rem 0;
 	text-align: center;
 }
 
@@ -87,6 +91,7 @@ h2.accueil {
 	margin: 2rem auto;
 	font-size: 2rem;
 	text-align: center;
+	background-color: rgb(128, 142, 155, 0.7);
 }
 
 .description article a {
@@ -101,6 +106,7 @@ h2.accueil {
 section.oblique {
 	text-align: right;
 	margin: 1rem;
+	padding-bottom: 1rem;
 }
 
 /********** PAGE CV **********/
@@ -117,7 +123,9 @@ section.oblique {
 	flex-wrap: wrap;
 	width: 80%;
 	margin: 2rem auto;
-	background-color: rgba(255, 255, 255, 0.2);
+	/*background-color: rgba(255, 255, 255, 0.2);*/
+	/*background-color: rgb(47, 53, 66, 0.9);*/
+	background-color: rgb(128, 142, 155, 0.7);
 }
 
 .experience h2, .competence h2, .formation h2 {
@@ -180,7 +188,7 @@ h3.titleExpBis {
 
 iframe {
 	margin-top: 2rem;
-	outline: 0.5rem solid;
+	outline: 0.5rem solid rgb(128, 142, 155, 0.7);
 }
 
 .contentExp {
@@ -206,7 +214,7 @@ iframe {
 }
 
 img.carrousel_photo {
-	outline: 1rem solid #FFF;
+	outline: 1rem solid rgb(128, 142, 155, 0.7);
 	max-width: 100%;
 	max-height: 100%;
 }
@@ -220,7 +228,7 @@ figure {
 	left: 19.25rem;
 	top: 52.5rem;
 	font-size: 2rem;
-	color: #FFF;
+	color: rgb(128, 142, 155, 0.7);
 	background-color: transparent;
     border: none;
 }
@@ -230,13 +238,13 @@ figure {
 	right: 19.25rem;
 	top: 52.5rem;
 	font-size: 2rem;
-	color: #FFF;
+	color: rgb(128, 142, 155, 0.7);
 	background-color: transparent;
     border: none;
 }
 
 .imageSmall {
-	outline: 0.25rem solid #fff;
+	outline: 0.25rem solid rgb(128, 142, 155, 0.7);
 	max-width: 240px;
 	height: 100%;
 }
@@ -248,7 +256,7 @@ figure {
 }
 
 #showreel {
-	outline: 1rem solid;
+	outline: 1rem solid rgb(128, 142, 155, 0.7);
 }
 
 /********** PAGE CONTACT **********/

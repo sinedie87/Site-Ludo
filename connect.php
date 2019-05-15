@@ -3,6 +3,7 @@
 
 include "utilities/pdo.php";
 
+/* Condition pour éviter msg d'erreur quand champs non remplis */
 if(isset($_POST) && !empty($_POST["mail"]) && !empty($_POST["password"])){
 
 	/* Variable de stockage infos saisies par utilisateur */
@@ -10,9 +11,10 @@ if(isset($_POST) && !empty($_POST["mail"]) && !empty($_POST["password"])){
 	$password = $_POST["password"];
 
 	$query = $pdo->prepare("SELECT * 
-		FROM users");
+		FROM users
+		WHERE mail = ?");
 
-	$query->execute();
+	$query->execute([$mail]);
 
 	$users = $query->fetch(PDO::FETCH_ASSOC);
 
@@ -23,7 +25,7 @@ if(isset($_POST) && !empty($_POST["mail"]) && !empty($_POST["password"])){
 	$passwordDB = $users["password"];
 	$password_check = password_verify($password, $passwordDB);
 
-	if($mail == $mailDB && $password == $password_check){
+	if($mail === $mailDB && $password_check){
 
 		session_start();
 		$_SESSION["connected"] = true;
@@ -36,6 +38,8 @@ if(isset($_POST) && !empty($_POST["mail"]) && !empty($_POST["password"])){
 		echo "Les informations saisies semblent incorrectes";
 	}
 };
+
+var_dump($mail, $mailDB, $password, $passwordDB, $password_check);
 
 include "templates/connect_tpl.php";
 

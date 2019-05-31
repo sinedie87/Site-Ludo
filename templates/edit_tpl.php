@@ -42,10 +42,19 @@
 
 					<textarea name="contenu" cols="30" rows="10" required="required"><?= $experience['contenu'] ?></textarea>
 
+					<?php if($experience['visibilite'] === "1"): ?>
+
+						<p>Visibilité : Oui<input type="radio" name="visibilite" value="1" required="required" checked>Non<input type="radio" name="visibilite" value="0" required="required"></p>
+
+					<?php else: ?>
+
+						<p>Visibilité : Oui<input type="radio" name="visibilite" value="1" required="required">Non<input type="radio" name="visibilite" value="0" required="required" checked></p>
+
+					<?php endif; ?>
+
 					<input type="text" name="links" value="<?= $experience['links'] ?>">
 
-					<input type="submit" value="Mettre à jour"><!--<input type="reset" value="Effacer">-->Oui<input type="radio" name="visibilite" value="1">
-					Non<input type="radio" name="visibilite" value="0">
+					<input type="submit" value="Mettre à jour"><!--<input type="reset" value="Effacer">-->
 
 				</fieldset>
 
@@ -64,6 +73,16 @@
 						<input type="text" name="titre_comp" required="required" value="<?= $competence['titre_comp'] ?>">
 
 						<textarea name="contenu_comp" cols="30" rows="10" required="required"><?= $competence['contenu_comp'] ?></textarea>
+
+						<?php if($competence['visibilite'] === "1"): ?>
+
+							<p>Visibilité : Oui<input type="radio" name="visibilite" value="1" required="required" checked>Non<input type="radio" name="visibilite" value="0" required="required"></p>
+
+						<?php else: ?>
+
+							<p>Visibilité : Oui<input type="radio" name="visibilite" value="1" required="required">Non<input type="radio" name="visibilite" value="0" required="required" checked></p>
+
+						<?php endif; ?>							
 
 						<input type="submit" value="Mettre à jour"><input type="reset" value="Effacer">
 
@@ -85,7 +104,17 @@
 
 							<input type="date" name="date_end_form" required="required" value="<?= $formation['date_end_form'] ?>">
 
-							<textarea name="titre_form" required="required"><?= $formation['titre_form'] ?></textarea>
+							<textarea name="titre_form" cols="30" rows="10" required="required"><?= $formation['titre_form'] ?></textarea>
+
+							<?php if($formation['visibilite'] === "1"): ?>
+
+								<p>Visibilité : Oui<input type="radio" name="visibilite" value="1" required="required" checked>Non<input type="radio" name="visibilite" value="0" required="required"></p>
+
+							<?php else: ?>
+
+								<p>Visibilité : Oui<input type="radio" name="visibilite" value="1" required="required">Non<input type="radio" name="visibilite" value="0" required="required" checked></p>
+
+							<?php endif; ?>
 
 							<input type="submit" value="Mettre à jour"><input type="reset" value="Effacer">
 

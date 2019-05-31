@@ -35,7 +35,7 @@ if(isset($_GET) && !empty($_GET)){
 
 		$query_comp->execute([$idParam]);
 
-		$competence = $query_comp->fetch( PDO::FETCH_ASSOC );
+		$competence = $query_comp->fetch(PDO::FETCH_ASSOC);
 
 		$query_comp->closeCursor();
 
@@ -52,7 +52,7 @@ if(isset($_GET) && !empty($_GET)){
 
 		$query_form->execute([$idParam]);
 
-		$formation = $query_form->fetch( PDO::FETCH_ASSOC );
+		$formation = $query_form->fetch(PDO::FETCH_ASSOC);
 
 		$query_form->closeCursor();
 

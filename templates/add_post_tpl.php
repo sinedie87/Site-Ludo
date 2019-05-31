@@ -37,9 +37,11 @@
 
 			<textarea name="contenu" cols="30" rows="10" placeholder="Contenu" required="required"></textarea>
 
+			<p>Visibilité : Oui<input type="radio" name="visibilite" value="1" required="required" checked>Non<input type="radio" name="visibilite" value="0" required="required"></p>
+
 			<input type="text" name="links" placeholder="Liens" required="required">
 
-			<input type="submit" value="Valider"><!--<input type="reset" value="Effacer">-->Oui<input type="radio" name="visibilite" value="1" required="required" checked>Non<input type="radio" name="visibilite" value="0" required="required">
+			<input type="submit" value="Valider"><!--<input type="reset" value="Effacer">-->
 
 		</form>
 
@@ -51,6 +53,8 @@
 			<input type="text" name="titre_comp" placeholder="Titre" required="required">
 
 			<textarea name="contenu_comp" cols="30" rows="10" placeholder="Contenu" required="required"></textarea>
+
+			<p>Visibilité : Oui<input type="radio" name="visibilite" value="1" required="required" checked>Non<input type="radio" name="visibilite" value="0" required="required"></p>
 
 			<input type="submit" value="Valider"><input type="reset" value="Effacer">
 
@@ -65,7 +69,9 @@
 
 			<input type="date" name="date_end_form" required="required">
 
-			<input type="text" name="titre_form" placeholder="Titre" required="required">
+			<textarea name="titre_form" cols="30" rows="10" placeholder="Titre" required="required"></textarea>
+
+			<p>Visibilité : Oui<input type="radio" name="visibilite" value="1" required="required" checked>Non<input type="radio" name="visibilite" value="0" required="required"></p>
 
 			<input type="submit" value="Valider"><input type="reset" value="Effacer">
 

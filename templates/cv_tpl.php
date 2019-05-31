@@ -50,19 +50,25 @@
 
 						<h3 class="titleExpBis">
 
-							<?= $experience["titre"]; ?>
+							<?= htmlspecialchars_decode($experience["titre"]); ?>
 
 						</h3>
+
 						<p class="contentExp">
-							<?= $experience["contenu"]; ?><br>
+							<?= htmlspecialchars_decode($experience["contenu"]); ?><br>
 
 							<!-- Permet de n'afficher que la balise iframe là où il y a une vidéo. Evite un bloc vide de 560 par 315 dans le HTML si pas de vidéo-->
-							<?php if(!empty($experience["links"]) && !($experience["links"] == "Aucun")): ?>
-							<iframe width="560" height="320" src="<?= $experience['links']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						<?php endif; ?>
-					</p>
+							<?php if(!empty($experience["links"]) && ($experience["links"] == "Aucun")): ?>
+							<p class="menu_mobile"></p>
 
-				<?php endif; ?>				
+							<?php else: ?>
+
+							<?= htmlspecialchars_decode($experience["links"]); ?>
+						
+						</p>
+
+							<?php endif; ?>
+				<?php endif; ?>
 
 			<?php endforeach; ?>
 			
@@ -73,13 +79,16 @@
 			<h2>Mes compétences :</h2>
 
 			<?php foreach ($competences as $competence): ?>
+				<?php if($competence["visibilite"] == 1): ?>
 
 				<h3 class="h3">
 
-					<?= $competence["titre_comp"] ?>
-					<?= $competence["contenu_comp"] ?>
+					<?= htmlspecialchars_decode($competence["titre_comp"]) ?>
+					<?= htmlspecialchars_decode($competence["contenu_comp"]) ?>
 
 				</h3>
+
+				<?php endif; ?>
 
 			<?php endforeach; ?>
 			
@@ -90,6 +99,7 @@
 			<h2>Mes formations :</h2>
 
 			<?php foreach ($formations as $formation): ?>
+				<?php if($formation["visibilite"] == 1): ?>
 
 				<h3 class="h3">
 
@@ -102,9 +112,11 @@
 							<?= strtoupper($formation["dates_form"]); ?>
 						<?php endif; ?>
 
-						<?= $formation["titre_form"] ?>
+						<?= htmlspecialchars_decode($formation["titre_form"]) ?>
 
 					</h3>
+					
+					<?php endif; ?>
 
 				<?php endforeach; ?>
 				

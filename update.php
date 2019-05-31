@@ -15,7 +15,7 @@ if(isset($_POST)){
 	$date_start = htmlspecialchars($_POST["date_start"]);
 	$date_end = htmlspecialchars($_POST["date_end"]);
 	$links = htmlspecialchars($_POST["links"]);
-	$visibilite = $_POST["visibilite"];
+	$visibilite = htmlspecialchars($_POST["visibilite"]);
 
 	$query_exp = $pdo->prepare("UPDATE experiences 
 		SET titre = ?, contenu = ?, date_start = ?, date_end = ?, links = ?, visibilite = ? 
@@ -42,15 +42,16 @@ if(isset($_POST)){
 
 	$titre_comp = htmlspecialchars($_POST["titre_comp"]);
 	$contenu_comp = htmlspecialchars($_POST["contenu_comp"]);
+	$visibilite = htmlspecialchars($_POST["visibilite"]);
 
 	$query_comp = $pdo->prepare("UPDATE competences 
-		SET titre_comp = ?, contenu_comp = ?
+		SET titre_comp = ?, contenu_comp = ?, visibilite = ?
 		WHERE id_comp = ?");
 
 	$idComp = $_GET["id_comp"];
 
 	$query_comp->execute(
-		[$titre_comp, $contenu_comp, $idComp]
+		[$titre_comp, $contenu_comp, $visibilite, $idComp]
 	);
 
 	$query_comp->closeCursor();
@@ -67,16 +68,18 @@ if(isset($_POST)){
 if(isset($_POST)){
 
 	$titre_form = htmlspecialchars($_POST["titre_form"]);
-	$contenu_form = htmlspecialchars($_POST["contenu_form"]);
+	$date_start_form = htmlspecialchars($_POST["date_start_form"]);
+	$date_end_form = htmlspecialchars($_POST["date_end_form"]);
+	$visibilite = htmlspecialchars($_POST["visibilite"]);
 
 	$query_form = $pdo->prepare("UPDATE formations 
-		SET titre_form = ?, contenu_form = ?
+		SET titre_form = ?, date_start_form = ?, date_end_form = ?, visibilite = ?
 		WHERE id_form = ?");
 
 	$idForm = $_GET["id_form"];
 
 	$query_form->execute(
-		[$titre_form, $contenu_form, $idForm]
+		[$titre_form, $date_start_form, $date_end_form, $visibilite, $idForm]
 	);
 
 	$query_form->closeCursor();

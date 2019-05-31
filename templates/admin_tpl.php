@@ -32,10 +32,19 @@
 
 			<!-- Boucle pour afficher tous les titres des publications EXP/FOR -->
 			<?php foreach ($experiences as $experience): ?>
+				
+				<?php if($experience['visibilite'] === "1"): ?>
+				
+					<h3><?= $experience['titre'] ?> <i id="visibiliteOK" class="fas fa-check"></i></h3>
 
-				<h3><?= $experience['titre'] ?></h3>
-				<a href="edit.php?id=<?= $experience['id'] ?> " class="lienAdmin">Modifier</a>
-				<a href="delete.php?id=<?= $experience['id'] ?> " class="lienAdmin">Supprimer</a>
+				<?php else: ?>
+
+					<h3><?= $experience['titre'] ?> <i id="visibiliteKO" class="fas fa-times"></i></h3>
+
+				<?php endif; ?>
+
+					<a href="edit.php?id=<?= $experience['id'] ?> " class="lienAdmin">Modifier</a>
+					<a href="delete.php?id=<?= $experience['id'] ?> " class="lienAdmin">Supprimer</a>
 				
 			<?php endforeach; ?>
 
@@ -48,9 +57,18 @@
 			<!-- Boucle pour afficher tous les titres des publications EXP/FOR -->
 			<?php foreach ($competences as $competence): ?>
 
-				<h3><?= $competence['titre_comp'] ?></h3>
-				<a href="edit.php?id_comp=<?= $competence['id_comp'] ?> " class="lienAdmin">Modifier</a>
-				<a href="delete.php?id_comp=<?= $competence['id_comp'] ?> " class="lienAdmin">Supprimer</a>
+				<?php if($competence['visibilite'] === "1"): ?>
+
+					<h3><?= $competence['titre_comp'] ?> <i id="visibiliteOK" class="fas fa-check"></i></h3>
+			
+				<?php else: ?>
+
+					<h3><?= $competence['titre_comp'] ?> <i id="visibiliteKO" class="fas fa-times"></i></h3>
+
+				<?php endif; ?>
+			
+					<a href="edit.php?id_comp=<?= $competence['id_comp'] ?> " class="lienAdmin">Modifier</a>
+					<a href="delete.php?id_comp=<?= $competence['id_comp'] ?> " class="lienAdmin">Supprimer</a>
 				
 			<?php endforeach; ?>
 
@@ -63,9 +81,19 @@
 			<!-- Boucle pour afficher tous les titres des publications EXP/FOR -->
 			<?php foreach ($formations as $formation): ?>
 
-				<h3><?= $formation['titre_form'] ?></h3>
-				<a href="edit.php?id_form=<?= $formation['id_form'] ?> " class="lienAdmin">Modifier</a>
-				<a href="delete.php?id_form=<?= $formation['id_form'] ?> " class="lienAdmin">Supprimer</a>
+				<?php if($formation['visibilite'] === "1"): ?>
+
+
+					<h3><?= $formation['titre_form'] ?> <i id="visibiliteOK" class="fas fa-check"></i></h3>
+				
+				<?php else: ?>
+
+					<h3><?= $formation['titre_form'] ?> <i id="visibiliteKO" class="fas fa-times"></i></h3>
+				
+				<?php endif; ?>
+
+					<a href="edit.php?id_form=<?= $formation['id_form'] ?> " class="lienAdmin">Modifier</a>
+					<a href="delete.php?id_form=<?= $formation['id_form'] ?> " class="lienAdmin">Supprimer</a>
 				
 			<?php endforeach; ?>
 

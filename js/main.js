@@ -10,6 +10,8 @@ let tab = [
 
 let pointeur = 0
 
+let intervalID = window.setInterval(title, 1000)
+
 function title () {
 
 	text = document.querySelector(".accueil").textContent = tab[pointeur]
@@ -23,7 +25,8 @@ function title () {
 			pointeur = 0
 			
 			}
+
 	}
 
 // Déclenche le changement de mots toutes les secondes
-setInterval("title ()", 1500)
+// setInterval("title ()", 1500)

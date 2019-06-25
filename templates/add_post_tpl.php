@@ -15,6 +15,11 @@
 	<!-- FAVICON -->
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="icon" type="image/png" href="images/logoLF.png">
+	<!-- WYSIWYG -->
+<!-- 	<link rel="stylesheet" href="Trumbowyg-master/dist/ui/trumbowyg.min.css">
+	<link rel="stylesheet" href="Trumbowyg-master/dist/ui/trumbowyg.perso.css">
+	<link rel="stylesheet" href="Trumbowyg-master/dist/plugins/colors/ui/trumbowyg.colors.css"> -->
+
 	<title>Ludovic FAURE - Ajouter</title>
 </head>
 
@@ -35,7 +40,7 @@
 
 			<input type="text" name="titre" placeholder="Titre" required="required">
 
-			<textarea name="contenu" cols="30" rows="10" placeholder="Contenu" required="required"></textarea>
+			<textarea id="form" class="my-editor" name="contenu" cols="30" rows="10" placeholder="Contenu" required="required"></textarea>
 
 			<p>Visibilité : Oui<input type="radio" name="visibilite" value="1" required="required" checked>Non<input type="radio" name="visibilite" value="0" required="required"></p>
 
@@ -78,6 +83,15 @@
 		</form>
 	</main>
 	<!-- JS -->
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+<script src="Trumbowyg-master/dist/trumbowyg.min.js"></script>
+<script src="Trumbowyg-master/dist/plugins/colors/trumbowyg.colors.min.js"></script>
+<script type="text/javascript" src="js/dist/langs/fr.min.js"></script>
+
+
 	<!-- Menu mobile -->
 	<script src="js/menu_mobile.js"></script>
 

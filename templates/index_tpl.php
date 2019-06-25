@@ -19,7 +19,7 @@
 	<title>Ludovic FAURE - Cascadeur spécialisé dans les arts martiaux</title>
 </head>
 
-<body onload="title()">
+<body>
 
 	<?php include "templates/header_tpl.php"; ?>
 

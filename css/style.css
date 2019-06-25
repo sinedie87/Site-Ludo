@@ -15,6 +15,8 @@ body {
 	background-image: url(../images/background.jpg);
 }
 
+/*<link rel="stylesheet" href="trumbowyg/dist/ui/trumbowyg.min.css">*/
+
 /* Class pour page active */
 .current_page {
 	background-color: #82ccdd;
@@ -37,7 +39,6 @@ p.echo {
 #visibiliteKO {
 	color: #EA2027;
 	font-size: 2rem;
-	
 }
 
 /****** HEADER, FOOTER, NAV ******/
@@ -70,6 +71,8 @@ header nav a, footer nav a {
 header nav a:hover, footer nav a:hover {
 	background-color: #f1f2f6;
 	color: #808e9b;
+	transition-duration: 2s;
+    transition-timing-function: ease-in-out;
 }
 
 /********** PAGE ACCUEIL **********/
@@ -356,6 +359,13 @@ input[type=password] {
 	border: none;
 	color: #808e9b;
 }
+
+/********** PAGE FORBIDDEN **********/
+
+.error {
+	text-align: center;
+	font-size: 2rem;
+};
 
 /******************** VERSION RESPONSIVE ********************/
 

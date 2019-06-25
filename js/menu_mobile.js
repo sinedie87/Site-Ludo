@@ -10,3 +10,12 @@ function menu () {
 }
 
 btn.addEventListener("click", menu)
+
+
+// $('#form').trumbowyg({
+//     btns: [['strong', 'em', 'foreColor', 'backColor'], ['insertImage']],
+//     autogrow: true,
+//     lang: 'fr'
+// });
+
+// $('#form').trumbowyg('html', '<span class="contentEx">Some HTML</span>')

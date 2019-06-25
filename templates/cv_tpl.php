@@ -64,7 +64,6 @@
 							<?php else: ?>
 
 							<?= htmlspecialchars_decode($experience["links"]); ?>
-						
 						</p>
 
 							<?php endif; ?>

@@ -3,40 +3,49 @@
 
 include "utilities/pdo.php";
 
-/*Supprime les informations de la TABLE experiences */
-$query_exp = $pdo->prepare("DELETE FROM experiences
-	WHERE id = ?");
+if($_SESSION["connected"] = true && $_SESSION["status"] === "admin"){
 
-$idExp = $_GET["id"];
+	/*Supprime les informations de la TABLE experiences */
+	$query_exp = $pdo->prepare("DELETE FROM experiences
+		WHERE id = ?");
 
-$query_exp->execute([$idExp]);
+	$idExp = $_GET["id"];
 
-$query_exp->closeCursor();
+	$query_exp->execute([$idExp]);
 
-/******************************************************************/
+	$query_exp->closeCursor();
 
-/*Supprime les informations de la TABLE competences */
-$query_comp = $pdo->prepare("DELETE FROM competences
-	WHERE id_comp = ?");
+	/******************************************************************/
 
-$idComp = $_GET["id_comp"];
+	/*Supprime les informations de la TABLE competences */
+	$query_comp = $pdo->prepare("DELETE FROM competences
+		WHERE id_comp = ?");
 
-$query_comp->execute([$idComp]);
+	$idComp = $_GET["id_comp"];
 
-$query_comp->closeCursor();
+	$query_comp->execute([$idComp]);
 
-/******************************************************************/
+	$query_comp->closeCursor();
 
-/*Supprime les informations de la TABLE formations */
-$query_form = $pdo->prepare("DELETE FROM formations
-	WHERE id_form = ?");
+	/******************************************************************/
 
-$idForm = $_GET["id_form"];
+	/*Supprime les informations de la TABLE formations */
+	$query_form = $pdo->prepare("DELETE FROM formations
+		WHERE id_form = ?");
 
-$query_form->execute([$idForm]);
+	$idForm = $_GET["id_form"];
 
-$query_form->closeCursor();
+	$query_form->execute([$idForm]);
 
-header("Location: admin.php");
+	$query_form->closeCursor();
+
+	header("Location: admin.php");
+}
+
+else{
+
+	header("Location: forbidden.php");
+
+}
 
 ?>

@@ -103,6 +103,7 @@
 	<!-- JS -->
 	<!-- Menu mobile -->
 	<script src="js/menu_mobile.js"></script>
+	<script src="js/redirection.js"></script>
 
 	<!-- Footer avec menu navigation -->
 
